@@ -3,15 +3,17 @@ Cluster policies
 HPC cluster policies
 
 Document describing Cemrc HPC cluster policies.
+
 CEMRC HPC cluster policies
-Edited: 12/20/2023 by Jennifer Scheuren
+
+Edited: 2/2/2025 by Jennifer Scheuren
+
 Contact info:  
-HPC Administrator: Jennifer Scheuren cryoem@biochem.wisc.edu
+
+HPC Administrator: Jennifer Scheuren jfscheuren@wisc.edu
+
 Most inquiries will be responded to within hours. The HPC cluster team aims to respond to all inquiries within one business day.  
 
-Documentation:
-
-    There are several documents in the Cryo-EM knowledge base located here: https://kb.wisc.edu/cryoem/internal. These documents include general cluster information and instructions for using the cluster with specific software.
 
 User training:
 
@@ -24,15 +26,15 @@ Project consulting:
 Accounts:
 
     To request access to the HPC cluster please fill out the following form https://explore.wisc.edu/cryoem_hpc_access_request
-    Users in the Department of Biochemistry who are sponsored by a faculty member (PI) may request access to the HPC cluster. Outside users with a valid NetID may also be granted access to the HPC cluster.
-    Removal: HPC cluster accounts will be audited every month. UW-Madison users who have not used the cluster in more than three months will be contacted to verify that they still need access. PIs of research groups are responsible for contacting the HPC admin when a user has left their group.
-    Locking: Accounts may be locked without warning for users misusing the cluster. If your account is locked, you will receive an e-mail from the HPC Administrator with steps to unlock your account.  
+    Users in the Department of Biochemistry who are sponsored by a faculty member (PI) may request access to the HPC cluster. Outside users with an MCCET affiliation may also be granted access to the HPC cluster.
+    Removal: HPC cluster accounts will be audited each month. UW-Madison users who have not used the cluster in more than three months will be contacted to verify that they still need access. PIs of research groups are responsible for contacting the HPC staff when a user has left their group.
+    Locking: Accounts may be locked without warning for users misusing the cluster. If your account is locked, you will receive an e-mail from the HPC staff with steps to unlock your account.  
 
 Guidelines for Use:
 
     Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the login node.
     User data should be stored in your home directory:  /mnt/hpc_users/home/NetID.
-    Data should be transferred to the cluster via Globus. Instructions for this are in the cryoem knowledge base.
+    Data should be transferred to the cluster via Globus. Instructions for this are `here. <https://uwcryoem.github.io/docs/Storage.html/>`_
 
 Software:
 
