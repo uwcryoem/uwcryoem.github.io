@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RELION &mdash; CryoEM 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="Faqs.html" />
+    <link rel="prev" title="Using other applications with Open onDemand" href="OtherApplications.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #C5050C" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CryoEM
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About the HPC Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Getting Started with the HPC Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hardware.html">Hardware Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storage.html">Storage Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policies.html">Policies</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Slurm Job Scheduler</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SlurmUserGuide.html">Slurm User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SlurmBatchScripts.html">Slurm Batch Scripts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Open onDemand</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Access.html">Access and Logging In</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileBrowser.html">File Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jobs.html">Jobs and Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MonitoringJobs.html">Monitoring Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RemoteDesktop.html">Remote Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ShellAccess.html">Shell Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OtherApplications.html">Other Applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Supported Software</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RELION</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Faqs.html">Frequently Asked Questions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #C5050C" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CryoEM</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">RELION</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Relion.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="relion">
+<h1>RELION<a class="headerlink" href="#relion" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="images/2024_09_30_OpenMPI_Relion_HPC.png"><img alt="Relion UI" src="images/2024_09_30_OpenMPI_Relion_HPC.png" style="width: 400px;" />
+</a>
+<p>Start RELION and submit a job to the cluster:</p>
+<blockquote>
+<div><p>SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC <a class="reference external" href="mailto:user&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">user<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a>
+Navigate to your RELION project directory:  cd /mnt/hpc_users/user/relionproject
+Launch RELION with the following command: relion &amp;
+Fill in the parameters for the relion job you want to run
+On the Run tab, if the option Submit to queue is editable, change Submit to queue to Yes.
+Defaults such as the “Queue submit command” and “Queue name” should already be provided.:18
+Defaults such as the number of nodes (hosts) should be 1, and can be changed to allow you to assign additional cluster servers to running your RELION job. Within the ‘a5000’ queue this could include as many as 8 servers with a total of 32 GPUs!</p>
+</div></blockquote>
+<dl>
+<dt>The “Standard submission script” for GPU jobs should already be pre-filled, but can be changed to a CPU version.</dt><dd><p>Enter values for the “Number of MPI procs”, “Number of Threads” , and then you can also choose to include more “Number of nodes (hosts)” and “Number of MPI procs per node”. If you want to run many MPI on servers choose a larger number of MPI than MPI procs per node, so that these become split between the requested node by the “Number of MPI procs per node”.</p>
+</dd>
+<dt>Example for Running tab, to submit a GPU accelerated job into the queue:</dt><dd><a class="reference internal image-reference" href="images/2024_09_30_OpenMPI_Relion_HPC.png"><img alt="Relion UI" src="images/2024_09_30_OpenMPI_Relion_HPC.png" style="width: 400px;" />
+</a>
+</dd>
+<dt>RELION with MPI on multiple nodes</dt><dd><p>GPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_gpu_mpi.sh
+CPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_cpu_mpi.sh</p>
+</dd>
+<dt>Suggestions for MPI and threads Jobs types for HPC submissions  Suggested MPI and Threads</dt><dd><p>Queue</p>
+</dd>
+</dl>
+<p>Motion correction (RELION’s Own)        Use high count of MPI (20-60), only 1 thread per.       cpu
+CTF estimation
+Use high count of MPI (20-60), only 1 thread per.
+cpu
+Auto-picking    Training of topaz is not parallelised and should always be performed with a single MPI process (Use 1 MPI per CPU core, 1 thread per MPI). Picking with topaz has been parallelised and can be run using multiple MPI processes. For picking you can apply as many as 4x MPI per server node each getting 1 GPU assigned and you can run across multiple compute nodes.         a5000 or a100
+Particle extraction
+2D classification       5 MPI, 12 threads, GPU enabled  a5000
+3D initial model        5 MPI, 12 threads, GPU enabled  a5000
+3D classification       5 MPI, 12 threads, GPU enabled  a5000
+3D auto-refine  5 MPI, 12 threads, GPU enabled          a5000
+3D multi-body   5 MPI, 12 threads, GPU enabled  a5000
+CTF refinement  CPU-only job, use multiple threads per MPI and use all available CPU cores.     cpu
+Bayesian polishing      CPU-only job, use multiple threads per MPI and use all available CPU cores.     cpu
+Mask creation
+Join star files
+Particle subtraction
+Post-processing         CPU-only job, use multiple threads per MPI and use all available CPU cores.     cpu
+Local resolution
+External        External processes and depends on job.
+GPU accelerated jobs Jobs that support GPU acceleration
+Auto-picking
+2D classification
+3D initial model
+3D classification
+3D auto-refine
+3D multi-body
+Other information
+Setup X11 forwarding</p>
+<p>If the UI doesn’t launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.</p>
+<p>X11 forwarding KB article:
+SLURM and continuing jobs</p>
+<p>The RELION GUI will not correctly stop and restart HPC jobs when using ‘Continue!’ to change parameters.</p>
+<p>It is recommended that your first ‘Abort’ the currently running job, change parameters, and restart to avoid having multiple conflicting SLURM jobs running for the same RELION job.
+GPU choice</p>
+<p>Internal benchmark found slightly better performance with the NVIDIA A5000 GPU vs the A100 GPU with 3D Refinement jobs and the RELION tutorial dataset. We recommend with RELION to generally submit to the A5000 queue and reserve the A100 queue for machine learning applications.</p>
+<p>Using multiple nodes</p>
+<p>We encourage using multiple nodes from the “a5000” queue to speed your jobs! If you have very long-running jobs, we may request that you restrict your number of nodes to allow other group members to run jobs simultaneously. If there are few cluster users at a time you may be able to make use of larger number of nodes in parallel.</p>
+<p>Policies for multiple-node usage may change over time as cluster usage increases.
+Technical Notes</p>
+<p>RELION accepts environment variables that can define defaults and add additional fields to provide info. This page details environment variables that RELION can recognize and use.</p>
+<p>We have setup on cryoemcluster.biochem.wisc.edu default settings that enable two additional fields to request more than one compute node and to determine how to split the MPI between multiple nodes:</p>
+<p>/etc/profile.d/relion_settings.sh:</p>
+<p># This defines extra options to enable configuring multi-node jobs</p>
+<p>export RELION_QSUB_EXTRA_COUNT=”2”</p>
+<p>export RELION_QSUB_EXTRA1=”Number of nodes (hosts)”</p>
+<p>export RELION_QSUB_EXTRA1_DEFAULT=”1”</p>
+<p>export RELION_QSUB_EXTRA2=”Number of MPI procs per node”</p>
+<p>export RELION_QSUB_EXTRA2_DEFAULT=”5”</p>
+<p># These define default sbatch script and queue to be used</p>
+<p>export RELION_QSUB_TEMPLATE=”/mnt/hpc_users/share/sbatch/relion_template_gpu_mpi.sh”</p>
+<p>export RELION_QUEUE_NAME=”a5000”</p>
+<p>These values, particularly the EXTRA fields are then provided via the relion_template_gpu_mpi.sh submit script to configure requesting from the cluster with multiple compute nodes. On the SLURM cluster, this requires communication via OpenMPI, which uses ports starting at 1024 that must be open for communication between the cluster nodes. We have a range from 1024-2048 of ports open on the HPC cluster that can be used for this communication with the expectation that we will not be running more than 1024 MPI processes ever on a single compute node (should be much less than available cores and threads).</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="OtherApplications.html" class="btn btn-neutral float-left" title="Using other applications with Open onDemand" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Faqs.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Jennifer Scheuren.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
