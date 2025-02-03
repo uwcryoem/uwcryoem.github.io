@@ -20,7 +20,7 @@ OOD documentation
    Hardware Information <Hardware>
    Storage Information <Storage>
    Policies <Policies>
-
+   Open OnDemand <OnDemand>
 
 .. toctree::
    :maxdepth: 2

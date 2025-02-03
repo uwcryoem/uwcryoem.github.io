@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Hardware.html">Hardware Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Storage.html">Storage Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Policies.html">Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OnDemand.html">Open OnDemand</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Slurm Job Scheduler</span></p>
 <ul>
@@ -100,7 +101,7 @@
              
   <section id="relion">
 <h1>RELION<a class="headerlink" href="#relion" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="images/2024_09_30_OpenMPI_Relion_HPC.png"><img alt="Relion UI" src="images/2024_09_30_OpenMPI_Relion_HPC.png" style="width: 400px;" />
+<a class="reference internal image-reference" href="_images/2024_09_30_OpenMPI_Relion_HPC.png"><img alt="Relion UI" src="_images/2024_09_30_OpenMPI_Relion_HPC.png" style="width: 400px;" />
 </a>
 <p>Start RELION and submit a job to the cluster:</p>
 <blockquote>
@@ -115,7 +116,7 @@ Defaults such as the number of nodes (hosts) should be 1, and can be changed to 
 <dl>
 <dt>The “Standard submission script” for GPU jobs should already be pre-filled, but can be changed to a CPU version.</dt><dd><p>Enter values for the “Number of MPI procs”, “Number of Threads” , and then you can also choose to include more “Number of nodes (hosts)” and “Number of MPI procs per node”. If you want to run many MPI on servers choose a larger number of MPI than MPI procs per node, so that these become split between the requested node by the “Number of MPI procs per node”.</p>
 </dd>
-<dt>Example for Running tab, to submit a GPU accelerated job into the queue:</dt><dd><a class="reference internal image-reference" href="images/2024_09_30_OpenMPI_Relion_HPC.png"><img alt="Relion UI" src="images/2024_09_30_OpenMPI_Relion_HPC.png" style="width: 400px;" />
+<dt>Example for Running tab, to submit a GPU accelerated job into the queue:</dt><dd><a class="reference internal image-reference" href="_images/2024_09_30_OpenMPI_Relion_HPC.png"><img alt="Relion UI" src="_images/2024_09_30_OpenMPI_Relion_HPC.png" style="width: 400px;" />
 </a>
 </dd>
 <dt>RELION with MPI on multiple nodes</dt><dd><p>GPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_gpu_mpi.sh
