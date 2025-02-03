@@ -20,7 +20,7 @@ Midwest Center for Cryo-Electron Tomography High-Performance Compute Cluster
    Hardware Information <Hardware>
    Storage Information <Storage>
    Policies <Policies>
-
+   Support <Support>
 
 .. toctree::
    :maxdepth: 2
