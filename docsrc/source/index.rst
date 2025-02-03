@@ -1,17 +1,60 @@
-.. CryoEM documentation master file, created by
-   sphinx-quickstart on Fri Jan 31 21:18:20 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-CryoEM documentation
-====================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+
+
+
+OOD documentation
+=================
+
+
 
 
 .. toctree::
+   :titlesonly:
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Getting Started
 
+   
+   About the HPC Cluster <About> 
+   Getting Started with the HPC Cluster <GettingStarted>
+   Hardware Information <Hardware>
+   Storage Information <Storage>
+   Policies <Policies>
+   Forms <Forms>
+
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+   :caption: Slurm Job Scheduler 
+   
+   Slurm User Guide <SlurmUserGuide>
+   Slurm Batch Scripts <SlurmBatchScripts>
+
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+   :caption: Open onDemand
+
+   Access and Logging In <Access>
+   File Browser <FileBrowser>
+   Jobs and Templates <Jobs>
+   Monitoring Jobs <MonitoringJobs>
+   Remote Desktop <RemoteDesktop>
+   Shell Access <ShellAccess>
+   Other Applications <OtherApplications>
+  
+    
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+   :caption: Supported Software
+
+   Relion
+
+.. toctree::
+   :maxdepth: 2
+   :caption: FAQs
+     
+   Frequently Asked Questions <Faqs>
