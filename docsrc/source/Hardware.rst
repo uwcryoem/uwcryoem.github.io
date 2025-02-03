@@ -2,15 +2,23 @@ Hardware Information
 =======================
 
 .. list-table:: Title
-   :widths: 25 25 50
+   :widths: 25 25 25 50
    :header-rows: 1
 
-   * - Heading row 1, column 1
-     - Heading row 1, column 2
-     - Heading row 1, column 3
-   * - Row 1, column 1
-     -
-     - Row 1, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
+   * - Compute Nodes
+     - GPU
+     - Memory
+     - CPU
+
+   * - a100
+     - 4x Nvidia a100s
+     - 512 GB
+     - 2x AMD 48 cores
+   * - a5000
+     - 4x Nvidia a5000s
+     - 512 GB
+     - 1x AMD 64 cores
+   * - cpu
+     - none
+     - 256 GB
+     - 1x AMD 64 cores

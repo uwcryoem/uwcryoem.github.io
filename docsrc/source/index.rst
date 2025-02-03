@@ -26,7 +26,8 @@ Midwest Center for Cryo-Electron Tomography High-Performance Compute Cluster
    :maxdepth: 2
    :titlesonly:
    :caption: Slurm Job Scheduler 
-   
+
+   About Slurm <AboutSlurm>
    Slurm User Guide <SlurmUserGuide>
    Slurm Batch Scripts <SlurmBatchScripts>
 

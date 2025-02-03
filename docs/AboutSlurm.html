@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to access the cluster &mdash; MCCET 1.0 documentation</title>
+  <title>About Slurm &mdash; MCCET 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -19,8 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Browsing your files with Open onDemand" href="FileBrowser.html" />
-    <link rel="prev" title="SlurmBatchScripts" href="SlurmBatchScripts.html" /> 
+    <link rel="next" title="Slurm User Guide" href="SlurmUserGuide.html" />
+    <link rel="prev" title="Cluster policies" href="Policies.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,14 +51,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Policies.html">Policies</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Slurm Job Scheduler</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="AboutSlurm.html">About Slurm</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SlurmUserGuide.html">Slurm User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SlurmBatchScripts.html">Slurm Batch Scripts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Open OnDemand</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Access and Logging In</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Access.html">Access and Logging In</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FileBrowser.html">File Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Jobs.html">Jobs and Templates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MonitoringJobs.html">Monitoring Jobs</a></li>
@@ -89,9 +89,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">How to access the cluster</li>
+      <li class="breadcrumb-item active">About Slurm</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/Access.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/AboutSlurm.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -99,16 +99,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="how-to-access-the-cluster">
-<h1>How to access the cluster<a class="headerlink" href="#how-to-access-the-cluster" title="Link to this heading"></a></h1>
+  <section id="about-slurm">
+<h1>About Slurm<a class="headerlink" href="#about-slurm" title="Link to this heading"></a></h1>
+<p>Slurm is an open-source job scheduling and management tool for Linux clusters. Slurm has three key functions. First, it allocates access to resources (compute nodes) to users so they can perform work. Second, it provides a framework for starting, executing, and monitoring work on the set of compute nodes. Finally, it manages a queue of pending work.</p>
+<p>Definitions:
+Cluster – set of computers for high-performance computing
+Head node – computer from which users can submit jobs
+Compute nodes – computers that jobs will be assigned by the scheduler. Users do not log in directly.
+Partition (or Queue) – a pool of nodes from some part of the cluster
+Ex. “GPU”, ”A5000”, “A100” and “CPU” (what hardware is available in each queue in the cryoemcluster.biochem.wisc.edu)</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="SlurmBatchScripts.html" class="btn btn-neutral float-left" title="SlurmBatchScripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="FileBrowser.html" class="btn btn-neutral float-right" title="Browsing your files with Open onDemand" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Policies.html" class="btn btn-neutral float-left" title="Cluster policies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="SlurmUserGuide.html" class="btn btn-neutral float-right" title="Slurm User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
