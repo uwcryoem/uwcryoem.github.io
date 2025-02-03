@@ -3,7 +3,7 @@
 
 
 
-OOD documentation
+Midwest Center for Cryo-Electron Tomography High-Performance Compute Cluster
 =================
 
 
@@ -20,7 +20,7 @@ OOD documentation
    Hardware Information <Hardware>
    Storage Information <Storage>
    Policies <Policies>
-   Open OnDemand <OnDemand>
+
 
 .. toctree::
    :maxdepth: 2
@@ -33,7 +33,7 @@ OOD documentation
 .. toctree::
    :maxdepth: 2
    :titlesonly:
-   :caption: Open onDemand
+   :caption: Open OnDemand
 
    Access and Logging In <Access>
    File Browser <FileBrowser>
