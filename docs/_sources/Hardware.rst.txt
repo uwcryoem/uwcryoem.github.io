@@ -1,7 +1,7 @@
 Hardware Information
 =======================
 
-.. list-table:: Title
+.. list-table:: Cluster Hardware
    :widths: 25 25 25 50
    :header-rows: 1
 
