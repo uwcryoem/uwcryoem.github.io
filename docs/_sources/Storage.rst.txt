@@ -4,6 +4,7 @@ Storage on the HPC Cluster
 User files for the HPC cluster are stored on a Ceph provides POSIX filesystem storage.
 
 To transfer files to the cluster:
+
 #. Login to https://www.globus.org/
 #. Search for the UW-Madison Cryo-Electron Microscopy Center HPC Access collection.
 #. Click on the folder with your username.
