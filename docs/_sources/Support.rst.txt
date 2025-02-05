@@ -1,5 +1,7 @@
 Support
 =========
-documentation: https://uwcryoem.github.io/
+Documentation: https://uwcryoem.github.io/
 
-contact: jfscheuren@wisc.edu
+Contact: jfscheuren@wisc.edu
+
+Slurm Documentation: https://slurm.schedmd.com/documentation.html
