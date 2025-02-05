@@ -17,6 +17,7 @@ Midwest Center for Cryo-Electron Tomography High-Performance Compute Cluster
    
    About the HPC Cluster <About> 
    Getting Started with the HPC Cluster <GettingStarted>
+   Forms <Forms>
    Hardware Information <Hardware>
    Storage Information <Storage>
    Policies <Policies>
