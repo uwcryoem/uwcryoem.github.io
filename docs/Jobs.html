@@ -103,6 +103,80 @@
              
   <section id="running-jobs-on-the-cluster">
 <h1>Running jobs on the cluster<a class="headerlink" href="#running-jobs-on-the-cluster" title="Link to this heading"></a></h1>
+<p>There are multiple ways to run jobs on the cluster. Some software such as Relion have built in ways to submit jobs. Jobs can also be submitted via a script from the command line. We have created multiple helper scripts to make job submission as easy as possible.</p>
+<p>Helper script locations: /mnt/hpc_users/share/bin</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Script locations and usage</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 26.3%" />
+<col style="width: 26.3%" />
+<col style="width: 47.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Script</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>submit_to_a100.sh</p></td>
+<td><p>submits a command to the a100 queue</p></td>
+<td><p>submit_to_a100.sh <em>your command</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>submit_to_a5000.sh</p></td>
+<td><p>submits a commmand to the a5000 queue</p></td>
+<td><p>submit_to_a5000.sh <em>your command</em></p></td>
+</tr>
+<tr class="row-even"><td><p>submit_to_cpu.sh</p></td>
+<td><p>submits a command to the cpu queue</p></td>
+<td><p>submit_to_cpu.sh</p></td>
+</tr>
+<tr class="row-odd"><td><p>alphafold-monomer.sh</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>alphafold-multimer.sh</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Relion script locations and usage</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 26.3%" />
+<col style="width: 26.3%" />
+<col style="width: 47.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Script</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>relion_template_cpu_mpi.sh</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>relion_template_cpu.sh</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>relion_template_gpu_mpi.sh</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>relion_template_gpu_mpi_limited.sh</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>relion_template_gpu.sh</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 
