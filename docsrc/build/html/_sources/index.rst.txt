@@ -54,9 +54,12 @@ Midwest Center for Cryo-Electron Tomography High-Performance Compute Cluster
    :caption: Supported Software
 
    Relion
+   Imod
+   Aretomo
 
 .. toctree::
    :maxdepth: 2
-   :caption: FAQs
-     
+   :caption: Training and FAQs 
+
+   Training     
    Frequently Asked Questions <Faqs>
