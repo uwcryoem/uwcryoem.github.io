@@ -3,4 +3,4 @@ Training
 
 Links to training documentation:
 
-`workshop handout  <https://cryoemondemand.biochem.wisc.edu/files/Handout.pdf>`_.
+`workshop handout  </files/Handout.pdf>`_
