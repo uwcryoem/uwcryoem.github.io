@@ -3,6 +3,8 @@ Training
 
 Links to training documentation:
 
-here is a pdf file :download:`pdf </files/Handout.pdf>`
+Workshop handout :download:`handout </files/Handout.pdf>`
 
-`workshop handout  </files/Handout.pdf>`_
+Workshop 1 powerpoint :download:'workshop1 </files/CEMRC_Wright_HPC_Intro_OOD_Feb7_2025_slides.pdf>`
+
+Workshop 2 powerpoint :download:'workshop2 </files/HPC_Open_OnDemand_Pt2.pdf>`
