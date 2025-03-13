@@ -56,6 +56,7 @@ Midwest Center for Cryo-Electron Tomography High-Performance Compute Cluster
    Relion
    Imod
    Aretomo
+   Chimera(x) <Chimera>
 
 .. toctree::
    :maxdepth: 2
