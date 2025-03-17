@@ -6,13 +6,20 @@ Open OnDemand provides desktop access so that users can run graphics-based appli
 
 
 
-***Closing a session***
+**Closing a session**
 
 To exit an interactive desktop session, click your username in the upper right of the desktop then click Log Out. A window will pop up, click Log Out on that window as well.
 
+**Viewing how much time is left in a session**
+
+The following command will display the time left in a session:
+
+  .. code-block:: bash 
+
+     sacct -X --format=jobid,user,state,partition,jobname,timelimit,elapsed
 
 
-***Extending a session***
+**Extending a session**
 
 By default interactive desktop sessions last for 100 hours or until the session is closed by the user logging out. If you need additional time for a session, please send an e-mail to jfscheuren@wisc.edu as early as possible. 
 

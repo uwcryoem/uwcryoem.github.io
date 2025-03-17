@@ -11,11 +11,11 @@ Hardware Information
      - CPU
 
    * - a100
-     - 4x Nvidia a100s
+     - 4x Nvidia a100
      - 512 GB
      - 2x AMD 48 cores
    * - a5000
-     - 4x Nvidia a5000s
+     - 4x Nvidia a5000
      - 512 GB
      - 1x AMD 64 cores
    * - cpu
