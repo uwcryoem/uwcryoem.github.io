@@ -3,7 +3,7 @@
 
 
 
-Midwest Center for Cryo-Electron Tomography High-Performance Compute Cluster
+UW-Madison cryo-EM high performance compute cluster
 ==============================================================================
 
 
