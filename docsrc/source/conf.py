@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'MCCET'
+project = 'UW-Madison Cryo-EM HPC'
 copyright = '2025, Jennifer Scheuren'
 author = 'Jennifer Scheuren'
 release = '1.0'

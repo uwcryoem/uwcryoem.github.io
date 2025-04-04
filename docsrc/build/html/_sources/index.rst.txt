@@ -3,7 +3,7 @@
 
 
 
-UW-Madison cryo-EM high performance compute cluster
+UW-Madison cryo-EM HPC
 ==============================================================================
 
 
