@@ -18,10 +18,10 @@ UW-Madison cryo-EM HPC
    GettingStarted/About
    GettingStarted/GettingStarted
    GettingStarted/Forms 
-   Hardware Information <Hardware>
-   Storage Information <Storage>
-   Policies <Policies>
-   Support <Support>
+   GettingStarted/Hardware Information <Hardware>
+   GettingStarted/Storage Information <Storage>
+   GettingStarted/Policies <Policies>
+   GettingStarted/Support <Support>
 
 .. toctree::
    :maxdepth: 2
