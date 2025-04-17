@@ -18,32 +18,32 @@ UW-Madison cryo-EM HPC
    GettingStarted/About
    GettingStarted/GettingStarted
    GettingStarted/Forms 
-   GettingStarted/Hardware Information <Hardware>
-   GettingStarted/Storage Information <Storage>
-   GettingStarted/Policies <Policies>
-   GettingStarted/Support <Support>
+   GettingStarted/Hardware
+   GettingStarted/Storage 
+   GettingStarted/Policies 
+   GettingStarted/Support
 
 .. toctree::
    :maxdepth: 2
    :titlesonly:
    :caption: Slurm Job Scheduler 
 
-   About Slurm <AboutSlurm>
-   Slurm User Guide <SlurmUserGuide>
-   Slurm Batch Scripts <SlurmBatchScripts>
+   About Slurm <SlurmJobScheduler/AboutSlurm>
+   Slurm User Guide <SlurmJobScheduler/SlurmUserGuide>
+   Slurm Batch Scripts <SlurmJobScheduler/SlurmBatchScripts>
 
 .. toctree::
    :maxdepth: 2
    :titlesonly:
    :caption: Open OnDemand
 
-   Access and Logging In <Access>
-   File Browser <FileBrowser>
-   Jobs and Templates <Jobs>
-   Monitoring Jobs <MonitoringJobs>
-   Remote Desktop <RemoteDesktop>
-   Shell Access <ShellAccess>
-   Other Applications <OtherApplications>
+   Access and Logging In <OpenOndemand/Access>
+   File Browser <OpenOndemand/FileBrowser>
+   Jobs and Templates <OpenOndemand/Jobs>
+   Monitoring Jobs <OpenOndemand/MonitoringJobs>
+   Remote Desktop <OpenOndemand/RemoteDesktop>
+   Shell Access <OpenOndemand/ShellAccess>
+   Other Applications <OpenOndemand/OtherApplications>
   
     
 
@@ -53,14 +53,14 @@ UW-Madison cryo-EM HPC
    :maxdepth: 2
    :caption: Supported Software
 
-   Relion
-   Imod
-   Aretomo
-   Chimera(x) <Chimera>
+   Relion <SupportedSoftware/Relion>
+   Imod <SupportedSoftware/Imod>
+   Aretomo <SupportedSoftware/Aretomo>
+   Chimera(x) <SupportedSoftware/Chimera> 
 
 .. toctree::
    :maxdepth: 2
    :caption: Training and FAQs 
 
-   Training     
-   Frequently Asked Questions <Faqs>
+   Training  <TrainingAndFaqs/Training>    
+   Frequently Asked Questions <TrainingAndFaqs/Faqs>
