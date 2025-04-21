@@ -38,7 +38,7 @@ squeue: View information about jobs in scheduling queue.
    squeue -- jobs 12345      view information about job 12345
    squeue  --jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347
 
-[user@biocsv-01627L ~]$ squeue
+$ squeue
  
 
   JOBID    PARTITION NAME  USER ST       TIME  NODES NODELIST(REASON)
@@ -75,24 +75,27 @@ SO - Job is staging out files
 ST - Job has been stopped
 S - Job has been suspended
 TO - Job terminated upon reaching time limit
+
 sinfo: Get information about compute nodes
 
-[user@biocsv-01627L ~]$ sinfo
+$ sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 a100         up   infinite      2   idle biocsv-01624L,biocsv-01625L
 a5000        up   infinite      8   idle biocsv-01661L,biocsv-01662L,biocsv-01663L,biocsv-01664L,biocsv-01665L,biocsv-01666L,biocsv-01667L,biocsv-01668L
 cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L
+
 sacct: Get information about pending, completed, and running jobs
 
-[hpcadmin@biocsv-01624L log]$ sacct --starttime 2023-11-1
+$ sacct --starttime 2023-11-1
 JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode 
 ------------ ---------- ---------- ---------- ---------- ---------- -------- 
 234            hostname_+   a5000              2            FAILED     0:53 
 234.batch      batch                           2            CANCELLED  0:53 
 235            hostname     a5000              2            FAILED     0:53 
+
 scancel: Signal or cancel jobs, job arrays, or job steps.
 
-      scancel 55
+scancel 55
 
    This will cancel job 55. Please don't cancel other user's jobs without speaking with them.
 
@@ -110,12 +113,19 @@ a100 - uses Nvidia A100 GPUs - 2 of these compute nodes available
     512 GB total system memory available
     Nodes are reserved for intensive machine learning jobs
 
-a5000 - users Nvidia A5000 GPUs - 8 of these compute nodes available
+a5000 - uses Nvidia A5000 GPUs - 8 of these compute nodes available
 
     1x AMD EPYC 7713P 64-Core Processor (total of 128 threads)
     4x A5000 GPUs are available
     512 GB total system memory available
     Nodes are best used for conventional GPU processing jobs
+
+r5000 - uses Nvidia RTX 5000 Ada GPUs - 2 of these compute nodes available
+
+    1x AMD EPYC 9534 64-Core Processor (total of 128 threads)
+    4x R5000 GPUs are available
+    512 GB total system memory
+    Nodes are best uses for conventional GPU processing jobs
 
 cpu - uses CPU only - no GPU - 4 of these compute nodes available
 
@@ -127,7 +137,6 @@ cpu - uses CPU only - no GPU - 4 of these compute nodes available
 Using GPUs in jobs: 
 
 example script:
-
       1 #!/bin/bash
       2
       3 #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3. #use 3 gpus for job

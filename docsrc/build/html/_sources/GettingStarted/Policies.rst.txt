@@ -1,14 +1,5 @@
 Cluster policies
 ===================
-HPC cluster policies
-
-Document describing Cemrc HPC cluster policies.
-
-CEMRC HPC cluster policies
-
-Edited: 2/2/2025 by Jennifer Scheuren
-
-Contact info:  
 
 HPC Administrator: Jennifer Scheuren jfscheuren@wisc.edu
 
@@ -33,7 +24,7 @@ Accounts:
 Guidelines for Use:
 
     Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the login node.
-    User data should be stored in your home directory:  /mnt/hpc_users/home/NetID.
+    User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/NetID.
     Data should be transferred to the cluster via Globus. Instructions for this are `here. <https://uwcryoem.github.io/docs/Storage.html/>`_
 
 Software:
