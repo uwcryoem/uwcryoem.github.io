@@ -6,7 +6,9 @@ How to access the cluster via Open OnDemand
   :alt: Open OnDemand logo
 
 
-To request access to the UW-Madison Cryo-EM HPC, please fill out this form: https://forms.gle/f6tN8EHxazP7iAHK7
+To request access to the UW-Madison Cryo-EM HPC, please fill out this form: 
+`Request Access Form <http://explore.wisc.edu/cryoem_hpc_access_request>`_
+
 After submitting the form you will be contacted within 5 days with next steps. 
 
 The HPC cluster can be accessed via an Open OnDemand portal at `https://cryoemondemand.biochem.wisc.edu <https://cryoemondemand.biochem.wisc.edu>`_.
