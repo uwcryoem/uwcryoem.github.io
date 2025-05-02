@@ -54,6 +54,7 @@ UW-Madison cryo-EM HPC
    :caption: Supported Software
 
    Relion <SupportedSoftware/Relion>
+   Matlab <SupportedSoftware/Matlab> 
    Imod <SupportedSoftware/Imod>
    Aretomo <SupportedSoftware/Aretomo>
    Chimera(x) <SupportedSoftware/Chimera> 
