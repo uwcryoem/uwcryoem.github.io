@@ -44,7 +44,7 @@ UW-Madison cryo-EM HPC
    Remote Desktop <OpenOndemand/RemoteDesktop>
    Shell Access <OpenOndemand/ShellAccess>
    Other Applications <OpenOndemand/OtherApplications>
-  
+   Logging out <OpenOndemand/Logout> 
     
 
 

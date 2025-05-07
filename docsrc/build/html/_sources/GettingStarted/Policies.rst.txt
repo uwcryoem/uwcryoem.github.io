@@ -18,15 +18,16 @@ Accounts:
 
     To request access to the HPC cluster please fill out the following form https://explore.wisc.edu/cryoem_hpc_access_request
     Users in the Department of Biochemistry who are sponsored by a faculty member (PI) may request access to the HPC cluster. Outside users with an MCCET affiliation may also be granted access to the HPC cluster.
-    Removal: HPC cluster accounts will be audited each month. UW-Madison users who have not used the cluster in more than three months will be contacted to verify that they still need access. PIs of research groups are responsible for contacting the HPC staff when a user has left their group.
-    Locking: Accounts may be locked without warning for users misusing the cluster. If your account is locked, you will receive an e-mail from the HPC staff with steps to unlock your account.  
+
+Removal: HPC cluster accounts will be audited each month. UW-Madison users who have not used the cluster in more than three months will be contacted to verify that they still need access. PIs of research groups are responsible for contacting the HPC staff when a user has left their group.
+
+Locking: Accounts may be locked without warning for users misusing the cluster. If your account is locked, you will receive an e-mail from the HPC staff with steps to unlock your account.  
 
 Guidelines for Use:
 
     Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the login node.
     User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/NetID.
-    Data should be transferred to the cluster via Globus. Instructions for this are `here. <https://uwcryoem.github.io/docs/Storage.html/>`_
-
+    Data should be transferred to the cluster via Globus. Instructions for this are `here. <https://uwcryoem.github.io/GettingStarted/Storage.html>`_
 Software:
 
     Commonly used software is available in a shared directory on the cluster at: /mnt/cryofs_applications. These applications include SBGrid and Alphafold.

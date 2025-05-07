@@ -9,15 +9,20 @@ ssh -YC <NetID>@wisc.edu@cryoemcluster.biochem.wisc.edu
 
 (Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).
 
-Frequently used commands for end users:
+**Frequently used commands for end users:**
+
 sbatch: Submit a batch script for later execution
+==================================================
 
 sbatch script.sh
+
 srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job
+============================================================================
 srun -N4 -l /bin/hostname -- will run hostname command on 4 nodes
+
 srun -n4 -l /bin/hostname -- will run hostname command on 4 processors
 
-Easy job submission scripts:
+**Easy job submission scripts:**
 
 Simple commands can be submitted with the helper scripts provided:
 
@@ -38,8 +43,8 @@ squeue: View information about jobs in scheduling queue.
    squeue -- jobs 12345      view information about job 12345
    squeue  --jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347
 
-$ squeue
- 
+$squeue
+========= 
 
   JOBID    PARTITION NAME  USER ST       TIME  NODES NODELIST(REASON)
     53       cpu script.s user PD       0:00      1 (Resources)
@@ -53,17 +58,17 @@ $ squeue
 Job states (ST column):
 * Most common states in bold
 BF- Boot fail (usually hardware issue - contact Matt or Jennifer)
-CA - Canceled
-CD - Completed
+**CA - Canceled**
+**CD - Completed**
 CF - Configuring
 CG - Completing
 DL - Deadline (job terminated on deadline)
-F - Failed
+**F - Failed**
 NF - Node Failed (contact Matt or Jennifer)
 OOM - Out of memory
-PD - Pending
+**PD - Pending**
 PR - Job preempted
-R - Job currently running
+**R - Job currently running**
 RD - Job being held due to reservation being deleted
 RQ - Job being requeued
 RH - Held job being requeued
@@ -85,49 +90,51 @@ a5000        up   infinite      8   idle biocsv-01661L,biocsv-01662L,biocsv-0166
 cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L
 
 sacct: Get information about pending, completed, and running jobs
+==================================================================
 
 $ sacct --starttime 2023-11-1
+
 JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode 
------------- ---------- ---------- ---------- ---------- ---------- -------- 
-234            hostname_+   a5000              2            FAILED     0:53 
+------------ ---------- ---------- ---------- ---------- ---------- --------234            hostname_+   a5000              2            FAILED     0:53 
 234.batch      batch                           2            CANCELLED  0:53 
 235            hostname     a5000              2            FAILED     0:53 
 
 scancel: Signal or cancel jobs, job arrays, or job steps.
+=========================================================
 
 scancel 55
 
-   This will cancel job 55. Please don't cancel other user's jobs without speaking with them.
+This will cancel job 55. Please don't cancel other user's jobs without speaking with them.
 
 Types of Nodes:
-
+===================
 login node - node that schedules jobs for the compute nodes
 
     Used for data staging and submission of jobs into the SLURM cluster.
     No local job running or CPU-intensive processes.
 
-a100 - uses Nvidia A100 GPUs - 2 of these compute nodes available
+**a100** - uses Nvidia A100 GPUs - 2 of these compute nodes available
 
     2x AMD 7443 24-Core Processors (total of 96 threads)
     4x A100 GPUs are available
     512 GB total system memory available
     Nodes are reserved for intensive machine learning jobs
 
-a5000 - uses Nvidia A5000 GPUs - 8 of these compute nodes available
+**a5000** - uses Nvidia A5000 GPUs - 8 of these compute nodes available
 
     1x AMD EPYC 7713P 64-Core Processor (total of 128 threads)
     4x A5000 GPUs are available
     512 GB total system memory available
     Nodes are best used for conventional GPU processing jobs
 
-r5000 - uses Nvidia RTX 5000 Ada GPUs - 2 of these compute nodes available
+**r5000** - uses Nvidia RTX 5000 Ada GPUs - 2 of these compute nodes available
 
     1x AMD EPYC 9534 64-Core Processor (total of 128 threads)
     4x R5000 GPUs are available
     512 GB total system memory
     Nodes are best uses for conventional GPU processing jobs
 
-cpu - uses CPU only - no GPU - 4 of these compute nodes available
+**cpu** - uses CPU only - no GPU - 4 of these compute nodes available
 
     1x AMD EPYC 7713P 64-Core Processor
     No GPUs
@@ -135,6 +142,7 @@ cpu - uses CPU only - no GPU - 4 of these compute nodes available
     Nodes are best used for interactive sessions, and non-GPU work
 
 Using GPUs in jobs: 
+====================
 
 example script:
       1 #!/bin/bash

@@ -56,6 +56,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="AboutSlurm.html">About Slurm</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Slurm User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sbatch-submit-a-batch-script-for-later-execution">sbatch: Submit a batch script for later execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job">srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#squeue">$squeue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sacct-get-information-about-pending-completed-and-running-jobs">sacct: Get information about pending, completed, and running jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#scancel-signal-or-cancel-jobs-job-arrays-or-job-steps">scancel: Signal or cancel jobs, job arrays, or job steps.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#types-of-nodes">Types of Nodes:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-gpus-in-jobs">Using GPUs in jobs:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SlurmBatchScripts.html">Slurm Batch Scripts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Open OnDemand</span></p>
@@ -67,6 +74,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/RemoteDesktop.html">Remote Desktop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/ShellAccess.html">Shell Access</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/OtherApplications.html">Other Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/Logout.html">Logging out</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Supported Software</span></p>
 <ul>
@@ -112,13 +120,17 @@
 <p>Users will access the main Slurm login node via SSH to run commands.</p>
 <p>ssh -YC &lt;NetID&gt;&#64;wisc.edu&#64;cryoemcluster.biochem.wisc.edu</p>
 <p>(Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).</p>
-<p>Frequently used commands for end users:
-sbatch: Submit a batch script for later execution</p>
-<p>sbatch script.sh
-srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job
-srun -N4 -l /bin/hostname – will run hostname command on 4 nodes
-srun -n4 -l /bin/hostname – will run hostname command on 4 processors</p>
-<p>Easy job submission scripts:</p>
+<p><strong>Frequently used commands for end users:</strong></p>
+</section>
+<section id="sbatch-submit-a-batch-script-for-later-execution">
+<h1>sbatch: Submit a batch script for later execution<a class="headerlink" href="#sbatch-submit-a-batch-script-for-later-execution" title="Link to this heading"></a></h1>
+<p>sbatch script.sh</p>
+</section>
+<section id="srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job">
+<h1>srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job<a class="headerlink" href="#srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job" title="Link to this heading"></a></h1>
+<p>srun -N4 -l /bin/hostname – will run hostname command on 4 nodes</p>
+<p>srun -n4 -l /bin/hostname – will run hostname command on 4 processors</p>
+<p><strong>Easy job submission scripts:</strong></p>
 <p>Simple commands can be submitted with the helper scripts provided:</p>
 <p><cite>submit_to_cpu.sh &lt;command arguments&gt;</cite> will submit a command into the CPU partition to run on a node, and can be used to quickly submit commands.</p>
 <p><cite>submit_to_a5000.sh &lt;command arguments&gt;</cite> likewise will submit a command to the A5000 partition to run on NVIDIA A5000 GPU nodes.</p>
@@ -132,7 +144,9 @@ squeue: View information about jobs in scheduling queue.</p>
 <div><p>squeue – jobs 12345      view information about job 12345
 squeue  –jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347</p>
 </div></blockquote>
-<p>$ squeue</p>
+</section>
+<section id="squeue">
+<h1>$squeue<a class="headerlink" href="#squeue" title="Link to this heading"></a></h1>
 <blockquote>
 <div><dl class="simple">
 <dt>JOBID    PARTITION NAME  USER ST       TIME  NODES NODELIST(REASON)</dt><dd><p>53       cpu script.s user PD       0:00      1 (Resources)
@@ -148,17 +162,17 @@ squeue  –jobs 12345, 12346, 12347             view information about about job
 <p>Job states (ST column):
 * Most common states in bold
 BF- Boot fail (usually hardware issue - contact Matt or Jennifer)
-CA - Canceled
-CD - Completed
+<strong>CA - Canceled</strong>
+<strong>CD - Completed</strong>
 CF - Configuring
 CG - Completing
 DL - Deadline (job terminated on deadline)
-F - Failed
+<strong>F - Failed</strong>
 NF - Node Failed (contact Matt or Jennifer)
 OOM - Out of memory
-PD - Pending
+<strong>PD - Pending</strong>
 PR - Job preempted
-R - Job currently running
+<strong>R - Job currently running</strong>
 RD - Job being held due to reservation being deleted
 RQ - Job being requeued
 RH - Held job being requeued
@@ -176,53 +190,58 @@ PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 a100         up   infinite      2   idle biocsv-01624L,biocsv-01625L
 a5000        up   infinite      8   idle biocsv-01661L,biocsv-01662L,biocsv-01663L,biocsv-01664L,biocsv-01665L,biocsv-01666L,biocsv-01667L,biocsv-01668L
 cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L</p>
-<p>sacct: Get information about pending, completed, and running jobs</p>
-<p>$ sacct –starttime 2023-11-1
-JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode
-———— ———- ———- ———- ———- ———- ——–
-234            hostname_+   a5000              2            FAILED     0:53
+</section>
+<section id="sacct-get-information-about-pending-completed-and-running-jobs">
+<h1>sacct: Get information about pending, completed, and running jobs<a class="headerlink" href="#sacct-get-information-about-pending-completed-and-running-jobs" title="Link to this heading"></a></h1>
+<p>$ sacct –starttime 2023-11-1</p>
+<p>JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode
+———— ———- ———- ———- ———- ———- ——–234            hostname_+   a5000              2            FAILED     0:53
 234.batch      batch                           2            CANCELLED  0:53
 235            hostname     a5000              2            FAILED     0:53</p>
-<p>scancel: Signal or cancel jobs, job arrays, or job steps.</p>
+</section>
+<section id="scancel-signal-or-cancel-jobs-job-arrays-or-job-steps">
+<h1>scancel: Signal or cancel jobs, job arrays, or job steps.<a class="headerlink" href="#scancel-signal-or-cancel-jobs-job-arrays-or-job-steps" title="Link to this heading"></a></h1>
 <p>scancel 55</p>
-<blockquote>
-<div><p>This will cancel job 55. Please don’t cancel other user’s jobs without speaking with them.</p>
-</div></blockquote>
-<p>Types of Nodes:</p>
+<p>This will cancel job 55. Please don’t cancel other user’s jobs without speaking with them.</p>
+</section>
+<section id="types-of-nodes">
+<h1>Types of Nodes:<a class="headerlink" href="#types-of-nodes" title="Link to this heading"></a></h1>
 <p>login node - node that schedules jobs for the compute nodes</p>
 <blockquote>
 <div><p>Used for data staging and submission of jobs into the SLURM cluster.
 No local job running or CPU-intensive processes.</p>
 </div></blockquote>
-<p>a100 - uses Nvidia A100 GPUs - 2 of these compute nodes available</p>
+<p><strong>a100</strong> - uses Nvidia A100 GPUs - 2 of these compute nodes available</p>
 <blockquote>
 <div><p>2x AMD 7443 24-Core Processors (total of 96 threads)
 4x A100 GPUs are available
 512 GB total system memory available
 Nodes are reserved for intensive machine learning jobs</p>
 </div></blockquote>
-<p>a5000 - uses Nvidia A5000 GPUs - 8 of these compute nodes available</p>
+<p><strong>a5000</strong> - uses Nvidia A5000 GPUs - 8 of these compute nodes available</p>
 <blockquote>
 <div><p>1x AMD EPYC 7713P 64-Core Processor (total of 128 threads)
 4x A5000 GPUs are available
 512 GB total system memory available
 Nodes are best used for conventional GPU processing jobs</p>
 </div></blockquote>
-<p>r5000 - uses Nvidia RTX 5000 Ada GPUs - 2 of these compute nodes available</p>
+<p><strong>r5000</strong> - uses Nvidia RTX 5000 Ada GPUs - 2 of these compute nodes available</p>
 <blockquote>
 <div><p>1x AMD EPYC 9534 64-Core Processor (total of 128 threads)
 4x R5000 GPUs are available
 512 GB total system memory
 Nodes are best uses for conventional GPU processing jobs</p>
 </div></blockquote>
-<p>cpu - uses CPU only - no GPU - 4 of these compute nodes available</p>
+<p><strong>cpu</strong> - uses CPU only - no GPU - 4 of these compute nodes available</p>
 <blockquote>
 <div><p>1x AMD EPYC 7713P 64-Core Processor
 No GPUs
 256 GB total system memory available
 Nodes are best used for interactive sessions, and non-GPU work</p>
 </div></blockquote>
-<p>Using GPUs in jobs:</p>
+</section>
+<section id="using-gpus-in-jobs">
+<h1>Using GPUs in jobs:<a class="headerlink" href="#using-gpus-in-jobs" title="Link to this heading"></a></h1>
 <dl class="simple">
 <dt>example script:</dt><dd><p>1 #!/bin/bash
 2

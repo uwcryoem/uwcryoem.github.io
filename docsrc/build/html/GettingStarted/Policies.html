@@ -56,6 +56,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/AboutSlurm.html">About Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html">Slurm User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html#sbatch-submit-a-batch-script-for-later-execution">sbatch: Submit a batch script for later execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html#srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job">srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html#squeue">$squeue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html#sacct-get-information-about-pending-completed-and-running-jobs">sacct: Get information about pending, completed, and running jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html#scancel-signal-or-cancel-jobs-job-arrays-or-job-steps">scancel: Signal or cancel jobs, job arrays, or job steps.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html#types-of-nodes">Types of Nodes:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmUserGuide.html#using-gpus-in-jobs">Using GPUs in jobs:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SlurmJobScheduler/SlurmBatchScripts.html">Slurm Batch Scripts</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Open OnDemand</span></p>
@@ -67,6 +74,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/RemoteDesktop.html">Remote Desktop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/ShellAccess.html">Shell Access</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/OtherApplications.html">Other Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/Logout.html">Logging out</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Supported Software</span></p>
 <ul>
@@ -121,15 +129,15 @@
 <p>Accounts:</p>
 <blockquote>
 <div><p>To request access to the HPC cluster please fill out the following form <a class="reference external" href="https://explore.wisc.edu/cryoem_hpc_access_request">https://explore.wisc.edu/cryoem_hpc_access_request</a>
-Users in the Department of Biochemistry who are sponsored by a faculty member (PI) may request access to the HPC cluster. Outside users with an MCCET affiliation may also be granted access to the HPC cluster.
-Removal: HPC cluster accounts will be audited each month. UW-Madison users who have not used the cluster in more than three months will be contacted to verify that they still need access. PIs of research groups are responsible for contacting the HPC staff when a user has left their group.
-Locking: Accounts may be locked without warning for users misusing the cluster. If your account is locked, you will receive an e-mail from the HPC staff with steps to unlock your account.</p>
+Users in the Department of Biochemistry who are sponsored by a faculty member (PI) may request access to the HPC cluster. Outside users with an MCCET affiliation may also be granted access to the HPC cluster.</p>
 </div></blockquote>
+<p>Removal: HPC cluster accounts will be audited each month. UW-Madison users who have not used the cluster in more than three months will be contacted to verify that they still need access. PIs of research groups are responsible for contacting the HPC staff when a user has left their group.</p>
+<p>Locking: Accounts may be locked without warning for users misusing the cluster. If your account is locked, you will receive an e-mail from the HPC staff with steps to unlock your account.</p>
 <p>Guidelines for Use:</p>
 <blockquote>
 <div><p>Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the login node.
 User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/NetID.
-Data should be transferred to the cluster via Globus. Instructions for this are <a class="reference external" href="https://uwcryoem.github.io/docs/Storage.html/">here.</a></p>
+Data should be transferred to the cluster via Globus. Instructions for this are <a class="reference external" href="https://uwcryoem.github.io/GettingStarted/Storage.html">here.</a></p>
 </div></blockquote>
 <p>Software:</p>
 <blockquote>

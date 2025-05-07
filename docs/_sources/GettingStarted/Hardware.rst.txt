@@ -23,6 +23,6 @@ Hardware Information
      - 256 GB
      - 1x AMD 64 cores
    * - r5000
-     - 4x Nvidia rtx 5000 ada generation
+     - 4x Nvidia rtx 5000 Ada generation
      - 512 GB
      - 1x AMD 64 cores
