@@ -17,7 +17,7 @@ sbatch: Submit a batch script for later execution
 sbatch script.sh
 
 srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job
-============================================================================
+===========================================================================================================
 srun -N4 -l /bin/hostname -- will run hostname command on 4 nodes
 
 srun -n4 -l /bin/hostname -- will run hostname command on 4 processors

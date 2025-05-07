@@ -28,6 +28,7 @@ Guidelines for Use:
     Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the login node.
     User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/NetID.
     Data should be transferred to the cluster via Globus. Instructions for this are `here. <https://uwcryoem.github.io/GettingStarted/Storage.html>`_
+
 Software:
 
     Commonly used software is available in a shared directory on the cluster at: /mnt/cryofs_applications. These applications include SBGrid and Alphafold.

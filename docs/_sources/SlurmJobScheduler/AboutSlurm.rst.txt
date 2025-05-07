@@ -16,5 +16,6 @@ Compute nodes – computers that jobs will be assigned by the scheduler. Users d
 Partition (or Queue) – a pool of nodes from some part of the cluster
 Ex. “GPU”, ”A5000”, “A100” and “CPU”.
 
-More documentation on Slurm can be found here: 
-`here<https://slurm.schedmd.com/documentation.html>`_.
+More documentation on Slurm can be found 
+`here <https://slurm.schedmd.com/documentation.html>`_
+
