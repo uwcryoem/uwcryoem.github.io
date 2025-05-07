@@ -18,7 +18,8 @@ sbatch: Submit a batch script for later execution
 sbatch script.sh
 
 srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job
-===========================================================================================================
+*********************************************************************************************************
+
 srun -N4 -l /bin/hostname -- will run hostname command on 4 nodes
 
 srun -n4 -l /bin/hostname -- will run hostname command on 4 processors
@@ -45,7 +46,7 @@ squeue: View information about jobs in scheduling queue.
    squeue  --jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347
 
 $squeue
-========= 
+********** 
 
   JOBID    PARTITION NAME  USER ST       TIME  NODES NODELIST(REASON)
     53       cpu script.s user PD       0:00      1 (Resources)
@@ -85,13 +86,15 @@ TO - Job terminated upon reaching time limit
 sinfo: Get information about compute nodes
 
 $ sinfo
+**********
+
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 a100         up   infinite      2   idle biocsv-01624L,biocsv-01625L
 a5000        up   infinite      8   idle biocsv-01661L,biocsv-01662L,biocsv-01663L,biocsv-01664L,biocsv-01665L,biocsv-01666L,biocsv-01667L,biocsv-01668L
 cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L
 
 sacct: Get information about pending, completed, and running jobs
-==================================================================
+*******************************************************************
 
 $ sacct --starttime 2023-11-1
 
@@ -101,14 +104,54 @@ JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode
 235            hostname     a5000              2            FAILED     0:53 
 
 scancel: Signal or cancel jobs, job arrays, or job steps.
-=========================================================
+***********************************************************
 
 scancel 55
 
 This will cancel job 55. Please don't cancel other user's jobs without speaking with them.
 
 Types of Nodes:
-===================
+******************
+
+
+.. list-table:: Cluster Hardware
+   :widths: 25 25 25 25 25 50
+   :header-rows: 1
+
+   * - Compute Nodes
+     - GPU
+     - Memory
+     - CPU
+     - Number of Nodes
+     - Use
+
+   * - a100
+     - 4x Nvidia a100
+     - 512 GB
+     - 2x AMD 48 cores
+     - Machine learning jobs
+
+   * - a5000
+     - 4x Nvidia a5000
+     - 512 GB
+     - 1x AMD 64 cores
+     - Conventional GPU processing jobs
+
+   * - cpu
+     - none
+     - 256 GB
+     - 1x AMD 64 cores
+     - Interactive sessions and non-GPU processing
+
+   * - r5000
+     - 4x Nvidia rtx 5000 Ada generation
+     - 512 GB
+     - 1x AMD 64 cores
+     - Conventional GPU processing jobs
+
+
+
+
 login node - node that schedules jobs for the compute nodes
 
     Used for data staging and submission of jobs into the SLURM cluster.
@@ -143,7 +186,7 @@ login node - node that schedules jobs for the compute nodes
     Nodes are best used for interactive sessions, and non-GPU work
 
 Using GPUs in jobs: 
-====================
+********************
 
 example script:
       1 #!/bin/bash
