@@ -12,7 +12,8 @@ ssh -YC <NetID>@wisc.edu@cryoemcluster.biochem.wisc.edu
 **Frequently used commands for end users:**
 
 sbatch: Submit a batch script for later execution
-==================================================
+****************************************************
+
 
 sbatch script.sh
 
