@@ -48,40 +48,134 @@ squeue: View information about jobs in scheduling queue.
 $squeue
 ********** 
 
-  JOBID    PARTITION NAME  USER ST       TIME  NODES NODELIST(REASON)
-    53       cpu script.s user PD       0:00      1 (Resources)
-    54       cpu script.s user PD       0:00      1 (Priority)
-    55       cpu script.s user PD       0:00      1 (Priority)
-    49       cpu script.s user  R       0:38      1 biocsv-01669L
-    50       cpu script.s user  R       0:25      1 biocsv-01670L
-    51       cpu script.s user  R       0:22      1 biocsv-01671L
-    52       cpu script.s user  R       0:22      1 biocsv-01672L
+.. list-table:: Job states
+   :widths: 50 50
+   :header-rows: 1
 
-Job states (ST column):
-* Most common states in bold
-BF- Boot fail (usually hardware issue - contact Matt or Jennifer)
-**CA - Canceled**
-**CD - Completed**
-CF - Configuring
-CG - Completing
-DL - Deadline (job terminated on deadline)
-**F - Failed**
-NF - Node Failed (contact Matt or Jennifer)
-OOM - Out of memory
-**PD - Pending**
-PR - Job preempted
-**R - Job currently running**
-RD - Job being held due to reservation being deleted
-RQ - Job being requeued
-RH - Held job being requeued
-RS - Job is about to change size
-RV - Job revoked
-SI - Job being signaled
-SE - Job requeued in special state
-SO - Job is staging out files
-ST - Job has been stopped
-S - Job has been suspended
-TO - Job terminated upon reaching time limit
+   * - Code
+     - Explanation
+
+   * - BF
+     - Boot fail (hardware issue
+   
+   * - CA 
+     - Cancelled
+ 
+   * - CD  
+     - Completed
+
+   * - CF 
+     - Configuring
+
+   * - CG
+     - Completing
+ 
+   * - DL
+     - Deadline
+
+   * - F 
+     - Failed
+
+   * - NF 
+     - Node failed
+
+   * - OOM
+     - Out of memory
+
+   * - PD 
+     - Pending
+
+   * - PR
+     - Job preempted
+ 
+   * - R 
+     - Running
+
+   * - RD
+     - Reservation deleted
+
+   * - RQ
+     - Requeued
+  
+   * - RH 
+     - Held being requeued
+
+   * - RS 
+     - Job changing size
+
+   * - RV
+     - Job revoked
+
+   * - SI
+     - Job bbeing signaled
+
+   * - SE
+     - Requeued in special state
+
+   * - SO
+     - Staging files
+
+   * - ST 
+     - Job stopped
+
+   * - S
+     - Job suspended
+
+   * - T 
+     - Job terminated
+
+
+Some text between tables?  
+
+
+.. list-table:: Examples
+       :widths: 10 15 8 6 30
+       :header-rows: 1
+  
+       * - JobID
+         - Partition
+         - State
+         - Nodes
+         - Reason
+
+
+       * - 53
+         - cpu
+         - PD
+         - 1
+         - (Resources)
+
+       * - 54
+         - gpu
+         - running
+         - 1 biocsv-01665L
+         - ""
+
+       * - 55
+         - gpu
+         - F
+         - 1 biocsv-01665L
+         - "" 
+
+
+
+.. list-table:: Cluser Hardware
+   :widths: 25 25 25 25 25 50
+   :header-rows: 1
+
+   * - Compute Nodes
+     - GPU
+     - Memory
+     - CPU
+     - Number of Nodes
+     - Use
+
+   * - a100
+     - 4x Nvidia a100
+     - 512 GB
+     - 2x AMD 48 cores
+     - 2
+     - Machine learning jobs
 
 sinfo: Get information about compute nodes
 
