@@ -129,24 +129,28 @@ Types of Nodes:
      - 4x Nvidia a100
      - 512 GB
      - 2x AMD 48 cores
+     - 2
      - Machine learning jobs
 
    * - a5000
      - 4x Nvidia a5000
      - 512 GB
      - 1x AMD 64 cores
+     - 8 
      - Conventional GPU processing jobs
 
    * - cpu
      - none
      - 256 GB
      - 1x AMD 64 cores
+     - 4
      - Interactive sessions and non-GPU processing
 
    * - r5000
      - 4x Nvidia rtx 5000 Ada generation
      - 512 GB
      - 1x AMD 64 cores
+     - 2
      - Conventional GPU processing jobs
 
 

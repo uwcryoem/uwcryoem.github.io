@@ -200,6 +200,56 @@ cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-0167
 </section>
 <section id="types-of-nodes">
 <h2>Types of Nodes:<a class="headerlink" href="#types-of-nodes" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Cluster Hardware</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 28.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Compute Nodes</p></th>
+<th class="head"><p>GPU</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>CPU</p></th>
+<th class="head"><p>Number of Nodes</p></th>
+<th class="head"><p>Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>a100</p></td>
+<td><p>4x Nvidia a100</p></td>
+<td><p>512 GB</p></td>
+<td><p>2x AMD 48 cores</p></td>
+<td><p>2</p></td>
+<td><p>Machine learning jobs</p></td>
+</tr>
+<tr class="row-odd"><td><p>a5000</p></td>
+<td><p>4x Nvidia a5000</p></td>
+<td><p>512 GB</p></td>
+<td><p>1x AMD 64 cores</p></td>
+<td><p>8</p></td>
+<td><p>Conventional GPU processing jobs</p></td>
+</tr>
+<tr class="row-even"><td><p>cpu</p></td>
+<td><p>none</p></td>
+<td><p>256 GB</p></td>
+<td><p>1x AMD 64 cores</p></td>
+<td><p>4</p></td>
+<td><p>Interactive sessions and non-GPU processing</p></td>
+</tr>
+<tr class="row-odd"><td><p>r5000</p></td>
+<td><p>4x Nvidia rtx 5000 Ada generation</p></td>
+<td><p>512 GB</p></td>
+<td><p>1x AMD 64 cores</p></td>
+<td><p>2</p></td>
+<td><p>Conventional GPU processing jobs</p></td>
+</tr>
+</tbody>
+</table>
 <p>login node - node that schedules jobs for the compute nodes</p>
 <blockquote>
 <div><p>Used for data staging and submission of jobs into the SLURM cluster.
