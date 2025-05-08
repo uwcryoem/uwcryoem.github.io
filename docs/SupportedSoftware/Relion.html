@@ -109,9 +109,8 @@
              
   <section id="relion">
 <h1>RELION<a class="headerlink" href="#relion" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="../_images/2024_09_30_OpenMPI_Relion_HPC.png"><img alt="Relion UI" src="../_images/2024_09_30_OpenMPI_Relion_HPC.png" style="width: 400px;" />
-</a>
-<p>Start RELION and submit a job to the cluster:</p>
+<img alt="Relion logo" src="relion_logo.png" />
+<p><strong>Start RELION and submit a job to the cluster:</strong></p>
 <blockquote>
 <div><p>SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC <a class="reference external" href="mailto:user&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">user<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a>
 Navigate to your RELION project directory:  cd /mnt/hpc_users/user/relionproject
@@ -159,19 +158,19 @@ Auto-picking
 3D classification
 3D auto-refine
 3D multi-body
-Other information
-Setup X11 forwarding</p>
+Other information</p>
+<p><strong>Setup X11 forwarding</strong></p>
 <p>If the UI doesn’t launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.</p>
-<p>X11 forwarding KB article:
-SLURM and continuing jobs</p>
+<p>X11 forwarding KB article:</p>
+<p><strong>SLURM and continuing jobs</strong></p>
 <p>The RELION GUI will not correctly stop and restart HPC jobs when using ‘Continue!’ to change parameters.</p>
 <p>It is recommended that your first ‘Abort’ the currently running job, change parameters, and restart to avoid having multiple conflicting SLURM jobs running for the same RELION job.
 GPU choice</p>
 <p>Internal benchmark found slightly better performance with the NVIDIA A5000 GPU vs the A100 GPU with 3D Refinement jobs and the RELION tutorial dataset. We recommend with RELION to generally submit to the A5000 queue and reserve the A100 queue for machine learning applications.</p>
 <p>Using multiple nodes</p>
 <p>We encourage using multiple nodes from the “a5000” queue to speed your jobs! If you have very long-running jobs, we may request that you restrict your number of nodes to allow other group members to run jobs simultaneously. If there are few cluster users at a time you may be able to make use of larger number of nodes in parallel.</p>
-<p>Policies for multiple-node usage may change over time as cluster usage increases.
-Technical Notes</p>
+<p>Policies for multiple-node usage may change over time as cluster usage increases.</p>
+<p><strong>Technical Notes</strong></p>
 <p>RELION accepts environment variables that can define defaults and add additional fields to provide info. This page details environment variables that RELION can recognize and use.</p>
 <p>We have setup on cryoemcluster.biochem.wisc.edu default settings that enable two additional fields to request more than one compute node and to determine how to split the MPI between multiple nodes:</p>
 <p>/etc/profile.d/relion_settings.sh:</p>

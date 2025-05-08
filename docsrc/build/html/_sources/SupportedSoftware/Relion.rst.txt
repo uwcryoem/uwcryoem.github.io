@@ -1,12 +1,11 @@
 RELION           
 =================
 
-.. image:: /images/2024_09_30_OpenMPI_Relion_HPC.png
-  :width: 400
-  :alt: Relion UI
+.. image:: /relion_logo.png
+   :alt: Relion logo
 
 
-Start RELION and submit a job to the cluster:
+**Start RELION and submit a job to the cluster:**
 
     SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC user@cryoemcluster.biochem.wisc.edu
     Navigate to your RELION project directory:  cd /mnt/hpc_users/user/relionproject
@@ -57,12 +56,14 @@ Auto-picking
 3D auto-refine
 3D multi-body
 Other information
-Setup X11 forwarding
+
+**Setup X11 forwarding**
 
 If the UI doesn't launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.
 
 X11 forwarding KB article:
-SLURM and continuing jobs
+
+**SLURM and continuing jobs**
 
 The RELION GUI will not correctly stop and restart HPC jobs when using 'Continue!' to change parameters.  
 
@@ -76,7 +77,9 @@ Using multiple nodes
 We encourage using multiple nodes from the "a5000" queue to speed your jobs! If you have very long-running jobs, we may request that you restrict your number of nodes to allow other group members to run jobs simultaneously. If there are few cluster users at a time you may be able to make use of larger number of nodes in parallel.
 
 Policies for multiple-node usage may change over time as cluster usage increases.
-Technical Notes
+
+
+**Technical Notes**
 
 RELION accepts environment variables that can define defaults and add additional fields to provide info. This page details environment variables that RELION can recognize and use.
 
