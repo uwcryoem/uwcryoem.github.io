@@ -1,7 +1,7 @@
 RELION           
 =================
 
-.. image:: /relion_logo.png
+.. image:: /images/relionlogo.jpg
    :alt: Relion logo
 
 
