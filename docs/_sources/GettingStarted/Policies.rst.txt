@@ -16,8 +16,7 @@ Project consulting:
 
 Accounts:
 
-    To request access to the HPC cluster please fill out the following form https://explore.wisc.edu/cryoem_hpc_access_request
-    Users in the Department of Biochemistry who are sponsored by a faculty member (PI) may request access to the HPC cluster. Outside users with an MCCET affiliation may also be granted access to the HPC cluster.
+    Personnel listed on approved National Network for Cryo-Electron Tomography projects can request access for additional processing support on the HPC cluster. To request access to the HPC cluster please fill out the following form `https:explore.wisc.edu/cryoem_hpc_access_request <https://explore.wisc.edu/cryoem_hpc_access_request>`_ .
 
 Removal: HPC cluster accounts will be audited each month. UW-Madison users who have not used the cluster in more than three months will be contacted to verify that they still need access. PIs of research groups are responsible for contacting the HPC staff when a user has left their group.
 
@@ -31,14 +30,14 @@ Guidelines for Use:
 
 Software:
 
-    Commonly used software is available in a shared directory on the cluster at: /mnt/cryofs_applications. These applications include SBGrid and Alphafold.
+    Commonly used software is available in a shared directory on the cluster at: /mnt/cryofs_applications. Up to date software information is located in the Supported Software section of the cluster documentation `https://uwcryoem.github.io <https://uwcryoem.github.io>`_ 
     Users may request additional software to be added to the cluster.
     Users may install additional software in their home directory.
 
 Security:
 
-    HPC users must comply with all campus IT and Cybersecurity policies. Please see https://it.wisc.edu/ to review these policies. Completion of the Campus Cybersecurity Awareness training is required prior to using the cluster.
-    Using sensitive or restricted data such as PII or HIPAA data on the HPC cluster is not permitted. Please see the university policy on handling sensitive data https://it.wisc.edu/learn/handling-sensitive-university-data/ and UW System Administrative Policy 1031.
+    HPC users must comply with all campus IT and Cybersecurity policies. Please review these policies `here. <https://it.wisc.edu>`_
+    Using sensitive or restricted data such as PII or HIPAA data on the HPC cluster is not permitted. Please see the university policy on handling sensitive data `here <https://it.wisc.edu/learn/handling-sensitive-university-data>`_ and UW System Administrative Policy 1031.
 
 Downtime and Maintenance:
 
@@ -49,10 +48,10 @@ Downtime and Maintenance:
 
 Resource Policies:
 
-    The login node (cryoemcluster.biochem.wisc.edu should be used only to ssh into worker nodes. Jobs should not be run on the login node. Any user using significant resources on the login node will be given a warning or have their account locked.
-    Large datasets should be removed from the cluster storage when jobs are complete. Cluster space will be audited periodically and users storing large amount of data will be contacted.
+    The login node should be used to submit jobs to worker nodes. Memory or cpu intensive jobs should not be run on the login node. Any user using significant resources on the login node will be given a warning or have their account locked.
+    Large datasets should be removed from the cluster storage when jobs are complete. Cluster space will be audited periodically and users storing a large amount of data will be contacted.
     Users may store up to 5TB of data in the cluster. Temporary exceptions to this rule may be granted.
-    Data storage will periodically be audited on the cluster. Users will be asked to move data if it has not been accessed in more than two weeks.
+    Data storage will periodically be audited on the cluster. Users will be asked to move data if it has not been accessed in more than one month.
 
 Reservations:
 
@@ -64,7 +63,8 @@ Misc. Policies:
 
 “The authors acknowledge resources made available for conducting the research reported in this paper from the Midwest Center for Cryo-ET’s (MCCET) high performance computing (HPC) cluster of the Department of Biochemistry at the University of Wisconsin-Madison, supported by the NIH Common Fund Transformative High Resolution Electron Microscopy program (U24 GM139168).”
 
-    Users should notify the HPC team of any published results.
+Please notify the MCCET staff of any published results by e-mailing cryoem@biochem.wisc.edu. 
+
     Users must abide by all software licensing requirements for cluster software and software installed in their own home directories.
 
 Warnings:
@@ -73,5 +73,5 @@ Warnings:
     User data on the cluster is not backed up. In the event of a system failure, user data may be lost. Please copy your data off the cluster as soon as possible when your jobs are complete.
     Users may not share accounts or login information.
     System updates may affect current software support. Every effort will be made to test software on a non-HPC machine prior to updating the cluster. If you experience software issues after an update, please e-mail the HPC team at cryoem@biochem.wisc.edu.
-    Using sensitive or restricted data on the HPC cluster is not permitted. Please see the university policy on handling sensitive university data https://it.wisc.edu/learn/handling-sensitive-university-data/ and UW System Administrative Policy 1031.
+    Using sensitive or restricted data on the HPC cluster is not permitted. Please see the university policy on handling sensitive university data `here <https://it.wisc.edu/learn/handling-sensitive-university-data>`_ and UW System Administrative Policy 1031.
 
