@@ -53,6 +53,7 @@ UW-Madison cryo-EM HPC
    :maxdepth: 2
    :caption: Supported Software
 
+   Licensing <SupportedSoftware/Licensing>
    Relion <SupportedSoftware/Relion>
    Matlab <SupportedSoftware/Matlab> 
    Imod <SupportedSoftware/Imod>
