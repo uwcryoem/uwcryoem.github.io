@@ -1,9 +1,6 @@
 RELION           
 =================
 
-.. image:: /images/relionlogo.jpg
-   :alt: Relion logo
-
 
 **Start RELION and submit a job to the cluster:**
 
@@ -107,3 +104,6 @@ export RELION_QUEUE_NAME="a5000"
 
 These values, particularly the EXTRA fields are then provided via the relion_template_gpu_mpi.sh submit script to configure requesting from the cluster with multiple compute nodes. On the SLURM cluster, this requires communication via OpenMPI, which uses ports starting at 1024 that must be open for communication between the cluster nodes. We have a range from 1024-2048 of ports open on the HPC cluster that can be used for this communication with the expectation that we will not be running more than 1024 MPI processes ever on a single compute node (should be much less than available cores and threads).
 
+ .. image:: /images/relionlogo.jpg
+    :alt: Relion logo
+    :width: 140
