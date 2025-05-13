@@ -109,7 +109,7 @@
              
   <section id="relion">
 <h1>RELION<a class="headerlink" href="#relion" title="Link to this heading"></a></h1>
-<p>Relion is an applicataion for processing cryo-EM data. You can read more about Relion on the <a class="reference external" href="https://relion.readthedocs.io/en/release-5.0/">Relion website.</a>.</p>
+<p>Relion is an applicataion for processing cryo-EM data. You can read more about Relion on the <a class="reference external" href="https://relion.readthedocs.io/en/release-5.0/">Relion website</a>.</p>
 <p>Please note: The current version of Relion running on the cluster is provided as part of the SBGrid software package. You need your own SBGrid license to use any of the SBGrid applications. More information about SBGrid can be found <a class="reference external" href="https://sbgrid.org">here</a></p>
 <p>There are three options for using Relion on the HPC cluster.</p>
 <ol class="arabic simple">
@@ -121,6 +121,17 @@
 <p>The Relion web app provides a way to use the Relion gui in your browser. To access the Relion web app either select the Relion button on the Open OnDemand dashboard or select it from the Apps or Interactive Apps menus.</p>
 <a class="reference internal image-reference" href="../_images/relion2.png"><img alt="Image of Open OnDemand dashboard with ways to access the Relion application highlighted." src="../_images/relion2.png" style="width: 600px;" />
 </a>
+<p>When you open the Relion application you will need to choose the location of your Relion project. If you are starting a new project you will be presented with a dialog asking if you would like to start a new Relion project. If you do not see a mouse cursor to click yes follow the steps below:</p>
+<ol class="arabic simple">
+<li><p>Expand the side bar on the left side of the page.</p></li>
+<li><p>Click the gear icon to access settings.</p></li>
+<li><p>Check the box for show dot if no cursor.</p></li>
+</ol>
+<p>You should now see a small dot as a cursor that you can use to click the Yes button.</p>
+<a class="reference internal image-reference" href="../_images/relionCursor.png"><img alt="Image showing changing the cursor settings to start the Relion application." src="../_images/relionCursor.png" style="width: 600px;" />
+</a>
+<p><strong>Interactive Desktop instructions:</strong></p>
+<p><strong>SSH instructions (authorized users):</strong></p>
 <p><strong>Start RELION and submit a job to the cluster:</strong></p>
 <blockquote>
 <div><p>SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC <a class="reference external" href="mailto:user&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">user<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a>

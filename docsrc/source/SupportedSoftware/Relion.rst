@@ -1,7 +1,7 @@
 RELION           
 =================
 
-Relion is an applicataion for processing cryo-EM data. You can read more about Relion on the `Relion website. <https://relion.readthedocs.io/en/release-5.0/>`_.
+Relion is an applicataion for processing cryo-EM data. You can read more about Relion on the `Relion website <https://relion.readthedocs.io/en/release-5.0/>`_.
 
 Please note: The current version of Relion running on the cluster is provided as part of the SBGrid software package. You need your own SBGrid license to use any of the SBGrid applications. More information about SBGrid can be found `here <https://sbgrid.org>`_
 
@@ -21,8 +21,22 @@ The Relion web app provides a way to use the Relion gui in your browser. To acce
    :width: 600
    :alt: Image of Open OnDemand dashboard with ways to access the Relion application highlighted. 
  
+When you open the Relion application you will need to choose the location of your Relion project. If you are starting a new project you will be presented with a dialog asking if you would like to start a new Relion project. If you do not see a mouse cursor to click yes follow the steps below:
+
+#. Expand the side bar on the left side of the page.
+#. Click the gear icon to access settings.
+#. Check the box for show dot if no cursor. 
+
+You should now see a small dot as a cursor that you can use to click the Yes button.
+
+.. image:: /images/relionCursor.png
+  :width: 600
+  :alt: Image showing changing the cursor settings to start the Relion application.
 
 
+**Interactive Desktop instructions:**
+
+**SSH instructions (authorized users):**
 
 **Start RELION and submit a job to the cluster:**
 
