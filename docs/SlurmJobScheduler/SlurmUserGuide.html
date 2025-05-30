@@ -364,7 +364,7 @@ cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-0167
 </tr>
 </tbody>
 </table>
-<p>login node - node that schedules jobs for the compute nodes</p>
+<p><strong>login node</strong> - node that schedules jobs for the compute nodes</p>
 <blockquote>
 <div><p>Used for data staging and submission of jobs into the SLURM cluster.
 No local job running or CPU-intensive processes.</p>
@@ -400,26 +400,27 @@ Nodes are best used for interactive sessions, and non-GPU work</p>
 </section>
 <section id="using-gpus-in-jobs">
 <h2>Using GPUs in jobs:<a class="headerlink" href="#using-gpus-in-jobs" title="Link to this heading"></a></h2>
-<dl class="simple">
-<dt>example script:</dt><dd><p>1 #!/bin/bash
-2
-3 #SBATCH –partition=a5000 –nodelist=biocsv-01662L   –gres=gpu:3. #use 3 gpus for job
-4
-5 srun –gres=gpu:1 hostname. #use 1 gpu for this command</p>
-</dd>
-</dl>
-<p>Control where job output goes:
-use –chdir=*your directory* to do work in your directory (can be mounted file system ie. /mnt/remote/user
+<p>example script:</p>
+<blockquote>
+<div><p>#!/bin/bash</p>
+<p>#SBATCH –partition=a5000 –nodelist=biocsv-01662L   –gres=gpu:3. #use 3 gpus for job</p>
+<blockquote>
+<div><p>srun –gres=gpu:1 hostname. #use 1 gpu for this command</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Control where job output goes:</strong></p>
+<p>use –chdir=*your directory* to do work in your directory (can be mounted file system ie. /mnt/remote/user
 use –output=*your directory*/slurm-%j.out ie. /tmp/</p>
-<dl class="simple">
-<dt>example script:</dt><dd><p>1 #!/bin/bash
-2
-3 #SBATCH –partition=a5000 –nodelist=biocsv-01662L   –gres=gpu:3
-4 #SBATCH –chdir=/mnt/remote
-5 #SBATCH –output=/tmp/slurm-%j.out
-6 srun –gres=gpu:1 hostname &gt;&gt; myfile.txt</p>
-</dd>
-</dl>
+<p>example script:</p>
+<blockquote>
+<div><p>#!/bin/bash</p>
+<p>#SBATCH –partition=a5000 –nodelist=biocsv-01662L   –gres=gpu:3</p>
+<p>#SBATCH –chdir=/mnt/remote</p>
+<p>#SBATCH –output=/tmp/slurm-%j.out</p>
+<blockquote>
+<div><p>srun –gres=gpu:1 hostname &gt;&gt; myfile.txt</p>
+</div></blockquote>
+</div></blockquote>
 <p>More Slurm documentation available at: <a class="reference external" href="https://slurm.schedmd.com/">https://slurm.schedmd.com/</a></p>
 </section>
 </section>

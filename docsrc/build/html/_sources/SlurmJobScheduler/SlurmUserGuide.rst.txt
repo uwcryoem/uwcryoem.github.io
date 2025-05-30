@@ -250,7 +250,7 @@ Types of Nodes:
 
 
 
-login node - node that schedules jobs for the compute nodes
+**login node** - node that schedules jobs for the compute nodes
 
     Used for data staging and submission of jobs into the SLURM cluster.
     No local job running or CPU-intensive processes.
@@ -287,22 +287,28 @@ Using GPUs in jobs:
 ********************
 
 example script:
-      1 #!/bin/bash
-      2
-      3 #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3. #use 3 gpus for job
-      4
-      5 srun --gres=gpu:1 hostname. #use 1 gpu for this command
 
-Control where job output goes:
+      #!/bin/bash
+      
+      #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3. #use 3 gpus for job
+      
+       srun --gres=gpu:1 hostname. #use 1 gpu for this command
+
+**Control where job output goes:**
+
 use --chdir=*your directory* to do work in your directory (can be mounted file system ie. /mnt/remote/user
 use --output=*your directory*/slurm-%j.out ie. /tmp/
 
 example script:
-      1 #!/bin/bash
-      2
-      3 #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3
-      4 #SBATCH --chdir=/mnt/remote
-      5 #SBATCH --output=/tmp/slurm-%j.out
-      6 srun --gres=gpu:1 hostname >> myfile.txt
+
+       #!/bin/bash
+      
+       #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3
+      
+       #SBATCH --chdir=/mnt/remote
+      
+       #SBATCH --output=/tmp/slurm-%j.out
+      
+        srun --gres=gpu:1 hostname >> myfile.txt
 
 More Slurm documentation available at: https://slurm.schedmd.com/
