@@ -421,6 +421,11 @@ use –output=*your directory*/slurm-%j.out ie. /tmp/</p>
 <div><p>srun –gres=gpu:1 hostname &gt;&gt; myfile.txt</p>
 </div></blockquote>
 </div></blockquote>
+<p>Some users will be able to access the main Slurm login node via SSH to run commands.</p>
+<div class="line-block">
+<div class="line">ssh -YC &lt;NetID&gt;&#64;wisc.edu&#64;cryoemcluster.biochem.wisc.edu</div>
+<div class="line">(Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).</div>
+</div>
 <p>More Slurm documentation available at: <a class="reference external" href="https://slurm.schedmd.com/">https://slurm.schedmd.com/</a></p>
 </section>
 </section>

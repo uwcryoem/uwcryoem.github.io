@@ -311,4 +311,15 @@ example script:
       
         srun --gres=gpu:1 hostname >> myfile.txt
 
+
+Some users will be able to access the main Slurm login node via SSH to run commands.
+
+| ssh -YC <NetID>@wisc.edu@cryoemcluster.biochem.wisc.edu   
+| (Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).
+
+
+
+
+
+
 More Slurm documentation available at: https://slurm.schedmd.com/
