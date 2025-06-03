@@ -3,11 +3,7 @@ Slurm User Guide
 
 Slurm is a cluster management and job scheduling system for Linux clusters. Slurm has three key functions. First, it allocates access to resources (compute nodes) to users so they can perform work. Second, it provides a framework for starting, executing, and monitoring work on the set of compute nodes. Finally, it manages a queue of pending work.
 
-Users will access the main Slurm login node via SSH to run commands.
 
-ssh -YC <NetID>@wisc.edu@cryoemcluster.biochem.wisc.edu
-
-(Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).
 
 **Frequently used commands for end users:**
 
@@ -15,12 +11,18 @@ sbatch: Submit a batch script for later execution
 ****************************************************
 
 
-sbatch script.sh
+.. code-block:: 
+
+   sbatch script.sh
 
 srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job
 *********************************************************************************************************
 
+.. code-block::
+
 srun -N4 -l /bin/hostname -- will run hostname command on 4 nodes
+
+.. code-block::
 
 srun -n4 -l /bin/hostname -- will run hostname command on 4 processors
 
@@ -39,14 +41,26 @@ By default, these GPU scripts request all available (4) GPUs per the server node
 
 Example here for submitting a command to run on a GPU server:
 
+.. code-block:: 
+
 submit_to_a100.sh AreTomo -InMrc 1138_G1__L4_TS_001_aligned.st -OutMrc test_a100/tomogram.mrc -VolZ 1350 -AlignZ 1200 -OutBin 6 -DarkTol 0.1 -FlipVol 1 -Kv 300 -PixSize 1.4 -Wbp 1 -AngFile angles.txt -Patch 4 4 -TiltAxis 89.9
-squeue: View information about jobs in scheduling queue. 
-   
-   squeue -- jobs 12345      view information about job 12345
-   squeue  --jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347
+
 
 $squeue
-********** 
+********
+
+squeue: View information about jobs in scheduling queue. 
+   
+.. code-block::
+
+   squeue -- jobs 12345      view information about job 12345
+
+.. code-block::
+
+   squeue  --jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347
+
+
+
 
 .. list-table:: Job states
    :widths: 50 50
@@ -125,7 +139,7 @@ $squeue
      - Job terminated
 
 
-Some text between tables?  
+
 
 
 .. list-table:: Examples
@@ -312,7 +326,9 @@ example script:
         srun --gres=gpu:1 hostname >> myfile.txt
 
 
-Some users will be able to access the main Slurm login node via SSH to run commands.
+***SSH instructions: ***
+
+Some users will be able to access the main Slurm login node via SSH to run commands. To request this access please email cryoem@biochem.wisc.edu
 
 | ssh -YC <NetID>@wisc.edu@cryoemcluster.biochem.wisc.edu   
 | (Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).

@@ -110,17 +110,22 @@
   <section id="slurm-user-guide">
 <h1>Slurm User Guide<a class="headerlink" href="#slurm-user-guide" title="Link to this heading"></a></h1>
 <p>Slurm is a cluster management and job scheduling system for Linux clusters. Slurm has three key functions. First, it allocates access to resources (compute nodes) to users so they can perform work. Second, it provides a framework for starting, executing, and monitoring work on the set of compute nodes. Finally, it manages a queue of pending work.</p>
-<p>Users will access the main Slurm login node via SSH to run commands.</p>
-<p>ssh -YC &lt;NetID&gt;&#64;wisc.edu&#64;cryoemcluster.biochem.wisc.edu</p>
-<p>(Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).</p>
 <p><strong>Frequently used commands for end users:</strong></p>
 <section id="sbatch-submit-a-batch-script-for-later-execution">
 <h2>sbatch: Submit a batch script for later execution<a class="headerlink" href="#sbatch-submit-a-batch-script-for-later-execution" title="Link to this heading"></a></h2>
-<p>sbatch script.sh</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="n">script</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
 </section>
 <section id="srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job">
 <h2>srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job<a class="headerlink" href="#srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <p>srun -N4 -l /bin/hostname – will run hostname command on 4 nodes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <p>srun -n4 -l /bin/hostname – will run hostname command on 4 processors</p>
 <p><strong>Easy job submission scripts:</strong></p>
 <p>Simple commands can be submitted with the helper scripts provided:</p>
@@ -130,15 +135,20 @@
 <cite>submit_to_gpu.sh &lt;command arguments&gt;</cite> will submit to any available GPU-containing server and request GPU resources.</p>
 <p>By default, these GPU scripts request all available (4) GPUs per the server node for the submitted job.</p>
 <p>Example here for submitting a command to run on a GPU server:</p>
-<p>submit_to_a100.sh AreTomo -InMrc 1138_G1__L4_TS_001_aligned.st -OutMrc test_a100/tomogram.mrc -VolZ 1350 -AlignZ 1200 -OutBin 6 -DarkTol 0.1 -FlipVol 1 -Kv 300 -PixSize 1.4 -Wbp 1 -AngFile angles.txt -Patch 4 4 -TiltAxis 89.9
-squeue: View information about jobs in scheduling queue.</p>
-<blockquote>
-<div><p>squeue – jobs 12345      view information about job 12345
-squeue  –jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347</p>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>submit_to_a100.sh AreTomo -InMrc 1138_G1__L4_TS_001_aligned.st -OutMrc test_a100/tomogram.mrc -VolZ 1350 -AlignZ 1200 -OutBin 6 -DarkTol 0.1 -FlipVol 1 -Kv 300 -PixSize 1.4 -Wbp 1 -AngFile angles.txt -Patch 4 4 -TiltAxis 89.9</p>
 </section>
 <section id="squeue">
 <h2>$squeue<a class="headerlink" href="#squeue" title="Link to this heading"></a></h2>
+<p>squeue: View information about jobs in scheduling queue.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squeue</span> <span class="o">--</span> <span class="n">jobs</span> <span class="mi">12345</span>      <span class="n">view</span> <span class="n">information</span> <span class="n">about</span> <span class="n">job</span> <span class="mi">12345</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squeue</span>  <span class="o">--</span><span class="n">jobs</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">12346</span><span class="p">,</span> <span class="mi">12347</span>             <span class="n">view</span> <span class="n">information</span> <span class="n">about</span> <span class="n">about</span> <span class="n">jobs</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">12346</span><span class="p">,</span> <span class="mi">12347</span>
+</pre></div>
+</div>
 <table class="docutils align-default" id="id1">
 <caption><span class="caption-text">Job states</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
 <colgroup>
@@ -222,7 +232,6 @@ squeue  –jobs 12345, 12346, 12347             view information about about job
 </tr>
 </tbody>
 </table>
-<p>Some text between tables?</p>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Examples</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
 <colgroup>
@@ -421,7 +430,8 @@ use –output=*your directory*/slurm-%j.out ie. /tmp/</p>
 <div><p>srun –gres=gpu:1 hostname &gt;&gt; myfile.txt</p>
 </div></blockquote>
 </div></blockquote>
-<p>Some users will be able to access the main Slurm login node via SSH to run commands.</p>
+<p><strong>*SSH instructions: *</strong></p>
+<p>Some users will be able to access the main Slurm login node via SSH to run commands. To request this access please email <a class="reference external" href="mailto:cryoem&#37;&#52;&#48;biochem&#46;wisc&#46;edu">cryoem<span>&#64;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a></p>
 <div class="line-block">
 <div class="line">ssh -YC &lt;NetID&gt;&#64;wisc.edu&#64;cryoemcluster.biochem.wisc.edu</div>
 <div class="line">(Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).</div>
