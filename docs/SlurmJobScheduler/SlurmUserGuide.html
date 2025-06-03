@@ -113,7 +113,7 @@
 <p><strong>Frequently used commands for end users:</strong></p>
 <section id="sbatch-submit-a-batch-script-for-later-execution">
 <h2>sbatch: Submit a batch script for later execution<a class="headerlink" href="#sbatch-submit-a-batch-script-for-later-execution" title="Link to this heading"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="n">script</span><span class="o">.</span><span class="n">sh</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="n">script</span><span class="o">.</span><span class="n">sh</span>  <span class="o">--</span> <span class="n">submits</span> <span class="n">script</span><span class="o">.</span><span class="n">sh</span> <span class="n">to</span> <span class="n">the</span> <span class="n">job</span> <span class="n">queue</span>
 </pre></div>
 </div>
 </section>
@@ -140,10 +140,10 @@
 <section id="squeue">
 <h2>$squeue<a class="headerlink" href="#squeue" title="Link to this heading"></a></h2>
 <p>squeue: View information about jobs in scheduling queue.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squeue</span> <span class="o">--</span> <span class="n">jobs</span> <span class="mi">12345</span>      <span class="n">view</span> <span class="n">information</span> <span class="n">about</span> <span class="n">job</span> <span class="mi">12345</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squeue</span> <span class="o">--</span><span class="n">job</span> <span class="mi">12345</span>      <span class="n">view</span> <span class="n">information</span> <span class="n">about</span> <span class="n">job</span> <span class="mi">12345</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squeue</span>  <span class="o">--</span><span class="n">jobs</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">12346</span><span class="p">,</span> <span class="mi">12347</span>             <span class="n">view</span> <span class="n">information</span> <span class="n">about</span> <span class="n">about</span> <span class="n">jobs</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">12346</span><span class="p">,</span> <span class="mi">12347</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squeue</span>  <span class="o">--</span><span class="n">job</span> <span class="mi">12345</span><span class="p">,</span><span class="mi">12346</span><span class="p">,</span><span class="mi">12347</span>      <span class="n">view</span> <span class="n">information</span> <span class="n">about</span> <span class="n">about</span> <span class="n">jobs</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">12346</span><span class="p">,</span> <span class="mi">12347</span>
 </pre></div>
 </div>
 <table class="docutils align-default" id="id1">
@@ -267,40 +267,11 @@
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id3">
-<caption><span class="caption-text">Cluser Hardware</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 14.3%" />
-<col style="width: 14.3%" />
-<col style="width: 14.3%" />
-<col style="width: 14.3%" />
-<col style="width: 14.3%" />
-<col style="width: 28.6%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Compute Nodes</p></th>
-<th class="head"><p>GPU</p></th>
-<th class="head"><p>Memory</p></th>
-<th class="head"><p>CPU</p></th>
-<th class="head"><p>Number of Nodes</p></th>
-<th class="head"><p>Use</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>a100</p></td>
-<td><p>4x Nvidia a100</p></td>
-<td><p>512 GB</p></td>
-<td><p>2x AMD 48 cores</p></td>
-<td><p>2</p></td>
-<td><p>Machine learning jobs</p></td>
-</tr>
-</tbody>
-</table>
 </section>
 <section id="sinfo">
 <h2>$ sinfo<a class="headerlink" href="#sinfo" title="Link to this heading"></a></h2>
-<table class="docutils align-default" id="id4">
-<caption><span class="caption-text">Sinfo output</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Sinfo output</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 16.7%" />
 <col style="width: 8.3%" />
@@ -345,21 +316,21 @@
 </section>
 <section id="sacct-get-information-about-pending-completed-and-running-jobs">
 <h2>sacct: Get information about pending, completed, and running jobs<a class="headerlink" href="#sacct-get-information-about-pending-completed-and-running-jobs" title="Link to this heading"></a></h2>
-<p>::code$ sacct –starttime 2023-11-1</p>
-<p>JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode
-———— ———- ———- ———- ———- ———- ——–234            hostname_+   a5000              2            FAILED     0:53
-234.batch      batch                           2            CANCELLED  0:53
-235            hostname     a5000              2            FAILED     0:53</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$sacct --starttime 2023-11-1
+</pre></div>
+</div>
 </section>
 <section id="scancel-signal-or-cancel-jobs-job-arrays-or-job-steps">
 <h2>scancel: Signal or cancel jobs, job arrays, or job steps.<a class="headerlink" href="#scancel-signal-or-cancel-jobs-job-arrays-or-job-steps" title="Link to this heading"></a></h2>
-<p>scancel 55</p>
-<p>This will cancel job 55. Please don’t cancel other user’s jobs without speaking with them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$scancel 55
+</pre></div>
+</div>
+<p>This will cancel job 55. Users can only cancel their own jobs. If you believe another user’s job should be cancelled please contact the HPC team.</p>
 </section>
 <section id="types-of-nodes">
 <h2>Types of Nodes:<a class="headerlink" href="#types-of-nodes" title="Link to this heading"></a></h2>
-<table class="docutils align-default" id="id5">
-<caption><span class="caption-text">Cluster Hardware</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Cluster Hardware</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 14.3%" />
@@ -415,31 +386,19 @@ No local job running or CPU-intensive processes.</p>
 </div></blockquote>
 <p><strong>a100</strong> - uses Nvidia A100 GPUs - 2 of these compute nodes available</p>
 <blockquote>
-<div><p>2x AMD 7443 24-Core Processors (total of 96 threads)
-4x A100 GPUs are available
-512 GB total system memory available
-Nodes are reserved for intensive machine learning jobs</p>
+<div><p>a100 nodes are best for intensive machine learning jobs</p>
 </div></blockquote>
 <p><strong>a5000</strong> - uses Nvidia A5000 GPUs - 8 of these compute nodes available</p>
 <blockquote>
-<div><p>1x AMD EPYC 7713P 64-Core Processor (total of 128 threads)
-4x A5000 GPUs are available
-512 GB total system memory available
-Nodes are best used for conventional GPU processing jobs</p>
+<div><p>a5000 nodes are best used for conventional GPU processing jobs</p>
 </div></blockquote>
 <p><strong>r5000</strong> - uses Nvidia RTX 5000 Ada GPUs - 2 of these compute nodes available</p>
 <blockquote>
-<div><p>1x AMD EPYC 9534 64-Core Processor (total of 128 threads)
-4x R5000 GPUs are available
-512 GB total system memory
-Nodes are best uses for conventional GPU processing jobs</p>
+<div><p>r5000 nodes are best uses for conventional GPU processing jobs</p>
 </div></blockquote>
 <p><strong>cpu</strong> - uses CPU only - no GPU - 4 of these compute nodes available</p>
 <blockquote>
-<div><p>1x AMD EPYC 7713P 64-Core Processor
-No GPUs
-256 GB total system memory available
-Nodes are best used for interactive sessions, and non-GPU work</p>
+<div><p>cpu nodes are best used for interactive sessions, and non-GPU work</p>
 </div></blockquote>
 </section>
 <section id="using-gpus-in-jobs">
@@ -463,8 +422,10 @@ use –output=*your directory*/slurm-%j.out ie. /tmp/</p>
 </div>
 <p><strong>*SSH instructions: *</strong></p>
 <p>Some users will be able to access the main Slurm login node via SSH to run commands. To request this access please email <a class="reference external" href="mailto:cryoem&#37;&#52;&#48;biochem&#46;wisc&#46;edu">cryoem<span>&#64;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">YC</span> <span class="o">&lt;</span><span class="n">NetID</span><span class="o">&gt;</span><span class="nd">@wisc</span><span class="o">.</span><span class="n">edu</span><span class="nd">@cryoemcluster</span><span class="o">.</span><span class="n">biochem</span><span class="o">.</span><span class="n">wisc</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
+</div>
 <div class="line-block">
-<div class="line">ssh -YC &lt;NetID&gt;&#64;wisc.edu&#64;cryoemcluster.biochem.wisc.edu</div>
 <div class="line">(Include -YC for X11 forwarding for any applications that require X11 windows such as RELION or IMOD).</div>
 </div>
 <p>More Slurm documentation available at: <a class="reference external" href="https://slurm.schedmd.com/">https://slurm.schedmd.com/</a></p>
