@@ -20,11 +20,11 @@ srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run
 
 .. code-block::
 
-srun -N4 -l /bin/hostname -- will run hostname command on 4 nodes
+   srun -N4 -l /bin/hostname -- will run hostname command on 4 nodes
 
 .. code-block::
 
-srun -n4 -l /bin/hostname -- will run hostname command on 4 processors
+   srun -n4 -l /bin/hostname -- will run hostname command on 4 processors
 
 **Easy job submission scripts:**
 
@@ -43,7 +43,7 @@ Example here for submitting a command to run on a GPU server:
 
 .. code-block:: 
 
-submit_to_a100.sh AreTomo -InMrc 1138_G1__L4_TS_001_aligned.st -OutMrc test_a100/tomogram.mrc -VolZ 1350 -AlignZ 1200 -OutBin 6 -DarkTol 0.1 -FlipVol 1 -Kv 300 -PixSize 1.4 -Wbp 1 -AngFile angles.txt -Patch 4 4 -TiltAxis 89.9
+   submit_to_a100.sh AreTomo -InMrc 1138_G1__L4_TS_001_aligned.st -OutMrc test_a100/tomogram.mrc -VolZ 1350 -AlignZ 1200 -OutBin 6 -DarkTol 0.1 -FlipVol 1 -Kv 300 -PixSize 1.4 -Wbp 1 -AngFile angles.txt -Patch 4 4 -TiltAxis 89.9
 
 
 $squeue
@@ -58,7 +58,6 @@ squeue: View information about jobs in scheduling queue.
 .. code-block::
 
    squeue  --jobs 12345, 12346, 12347             view information about about jobs 12345, 12346, 12347
-
 
 
 
@@ -191,20 +190,48 @@ squeue: View information about jobs in scheduling queue.
      - 2
      - Machine learning jobs
 
-sinfo: Get information about compute nodes
 
 $ sinfo
 **********
 
-PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-a100         up   infinite      2   idle biocsv-01624L,biocsv-01625L
-a5000        up   infinite      8   idle biocsv-01661L,biocsv-01662L,biocsv-01663L,biocsv-01664L,biocsv-01665L,biocsv-01666L,biocsv-01667L,biocsv-01668L
-cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L
+.. list-table:: Sinfo output
+   :widths: 20 10 20 10 10 50
+   :header-rows: 1
+
+   * - PARTITION 
+     - AVAIL  
+     - TIMELIMIT  
+     - NODES  
+     - STATE 
+     - NODELIST
+ 
+   * - a100
+     - up
+     - infinite
+     - 2
+     - idle
+     - biocsv-01624L,biocsv-01625L
+
+   * - a5000
+     - up
+     - infinite
+     - 8 
+     - idle
+     - biocsv-01661L,biocsv-01662L,biocsv-01663L,biocsv-01664L,biocsv-01665L,biocsv-01666L,biocsv-01667L,biocsv-01668    L
+
+   * - cpu*
+     - up
+     - infinite
+     - 4
+     - idle
+     - biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L
+
+
 
 sacct: Get information about pending, completed, and running jobs
 *******************************************************************
 
-$ sacct --starttime 2023-11-1
+::code$ sacct --starttime 2023-11-1
 
 JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode 
 ------------ ---------- ---------- ---------- ---------- ---------- --------234            hostname_+   a5000              2            FAILED     0:53 
@@ -299,14 +326,13 @@ Types of Nodes:
 
 Using GPUs in jobs: 
 ********************
-
 example script:
 
-      #!/bin/bash
-      
-      #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3. #use 3 gpus for job
-      
-       srun --gres=gpu:1 hostname. #use 1 gpu for this command
+.. code-block::
+
+   #!/bin/bash
+   #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3. #use 3 gpus for job
+    srun --gres=gpu:1 hostname. #use 1 gpu for this command
 
 **Control where job output goes:**
 
@@ -315,15 +341,13 @@ use --output=*your directory*/slurm-%j.out ie. /tmp/
 
 example script:
 
-       #!/bin/bash
-      
-       #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3
-      
-       #SBATCH --chdir=/mnt/remote
-      
-       #SBATCH --output=/tmp/slurm-%j.out
-      
-        srun --gres=gpu:1 hostname >> myfile.txt
+.. code-block::
+
+   #!/bin/bash
+   #SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3
+   #SBATCH --chdir=/mnt/remote
+   #SBATCH --output=/tmp/slurm-%j.out
+   srun --gres=gpu:1 hostname >> myfile.txt
 
 
 ***SSH instructions: ***

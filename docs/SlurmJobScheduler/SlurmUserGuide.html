@@ -119,14 +119,12 @@
 </section>
 <section id="srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job">
 <h2>srun: Submit a job to run immediately, run parallel tasks in an sbatch file, run an interactive gui job<a class="headerlink" href="#srun-submit-a-job-to-run-immediately-run-parallel-tasks-in-an-sbatch-file-run-an-interactive-gui-job" title="Link to this heading"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">-</span><span class="n">N4</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">hostname</span> <span class="o">--</span> <span class="n">will</span> <span class="n">run</span> <span class="n">hostname</span> <span class="n">command</span> <span class="n">on</span> <span class="mi">4</span> <span class="n">nodes</span>
 </pre></div>
 </div>
-<p>srun -N4 -l /bin/hostname – will run hostname command on 4 nodes</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">-</span><span class="n">n4</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">hostname</span> <span class="o">--</span> <span class="n">will</span> <span class="n">run</span> <span class="n">hostname</span> <span class="n">command</span> <span class="n">on</span> <span class="mi">4</span> <span class="n">processors</span>
 </pre></div>
 </div>
-<p>srun -n4 -l /bin/hostname – will run hostname command on 4 processors</p>
 <p><strong>Easy job submission scripts:</strong></p>
 <p>Simple commands can be submitted with the helper scripts provided:</p>
 <p><cite>submit_to_cpu.sh &lt;command arguments&gt;</cite> will submit a command into the CPU partition to run on a node, and can be used to quickly submit commands.</p>
@@ -135,10 +133,9 @@
 <cite>submit_to_gpu.sh &lt;command arguments&gt;</cite> will submit to any available GPU-containing server and request GPU resources.</p>
 <p>By default, these GPU scripts request all available (4) GPUs per the server node for the submitted job.</p>
 <p>Example here for submitting a command to run on a GPU server:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">submit_to_a100</span><span class="o">.</span><span class="n">sh</span> <span class="n">AreTomo</span> <span class="o">-</span><span class="n">InMrc</span> <span class="mi">1138</span><span class="n">_G1__L4_TS_001_aligned</span><span class="o">.</span><span class="n">st</span> <span class="o">-</span><span class="n">OutMrc</span> <span class="n">test_a100</span><span class="o">/</span><span class="n">tomogram</span><span class="o">.</span><span class="n">mrc</span> <span class="o">-</span><span class="n">VolZ</span> <span class="mi">1350</span> <span class="o">-</span><span class="n">AlignZ</span> <span class="mi">1200</span> <span class="o">-</span><span class="n">OutBin</span> <span class="mi">6</span> <span class="o">-</span><span class="n">DarkTol</span> <span class="mf">0.1</span> <span class="o">-</span><span class="n">FlipVol</span> <span class="mi">1</span> <span class="o">-</span><span class="n">Kv</span> <span class="mi">300</span> <span class="o">-</span><span class="n">PixSize</span> <span class="mf">1.4</span> <span class="o">-</span><span class="n">Wbp</span> <span class="mi">1</span> <span class="o">-</span><span class="n">AngFile</span> <span class="n">angles</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">Patch</span> <span class="mi">4</span> <span class="mi">4</span> <span class="o">-</span><span class="n">TiltAxis</span> <span class="mf">89.9</span>
 </pre></div>
 </div>
-<p>submit_to_a100.sh AreTomo -InMrc 1138_G1__L4_TS_001_aligned.st -OutMrc test_a100/tomogram.mrc -VolZ 1350 -AlignZ 1200 -OutBin 6 -DarkTol 0.1 -FlipVol 1 -Kv 300 -PixSize 1.4 -Wbp 1 -AngFile angles.txt -Patch 4 4 -TiltAxis 89.9</p>
 </section>
 <section id="squeue">
 <h2>$squeue<a class="headerlink" href="#squeue" title="Link to this heading"></a></h2>
@@ -299,18 +296,56 @@
 </tr>
 </tbody>
 </table>
-<p>sinfo: Get information about compute nodes</p>
 </section>
 <section id="sinfo">
 <h2>$ sinfo<a class="headerlink" href="#sinfo" title="Link to this heading"></a></h2>
-<p>PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-a100         up   infinite      2   idle biocsv-01624L,biocsv-01625L
-a5000        up   infinite      8   idle biocsv-01661L,biocsv-01662L,biocsv-01663L,biocsv-01664L,biocsv-01665L,biocsv-01666L,biocsv-01667L,biocsv-01668L
-cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Sinfo output</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 8.3%" />
+<col style="width: 16.7%" />
+<col style="width: 8.3%" />
+<col style="width: 8.3%" />
+<col style="width: 41.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>PARTITION</p></th>
+<th class="head"><p>AVAIL</p></th>
+<th class="head"><p>TIMELIMIT</p></th>
+<th class="head"><p>NODES</p></th>
+<th class="head"><p>STATE</p></th>
+<th class="head"><p>NODELIST</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>a100</p></td>
+<td><p>up</p></td>
+<td><p>infinite</p></td>
+<td><p>2</p></td>
+<td><p>idle</p></td>
+<td><p>biocsv-01624L,biocsv-01625L</p></td>
+</tr>
+<tr class="row-odd"><td><p>a5000</p></td>
+<td><p>up</p></td>
+<td><p>infinite</p></td>
+<td><p>8</p></td>
+<td><p>idle</p></td>
+<td><p>biocsv-01661L,biocsv-01662L,biocsv-01663L,biocsv-01664L,biocsv-01665L,biocsv-01666L,biocsv-01667L,biocsv-01668    L</p></td>
+</tr>
+<tr class="row-even"><td><p>cpu*</p></td>
+<td><p>up</p></td>
+<td><p>infinite</p></td>
+<td><p>4</p></td>
+<td><p>idle</p></td>
+<td><p>biocsv-01669L,biocsv-01670L,biocsv-01671L,biocsv-01672L</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="sacct-get-information-about-pending-completed-and-running-jobs">
 <h2>sacct: Get information about pending, completed, and running jobs<a class="headerlink" href="#sacct-get-information-about-pending-completed-and-running-jobs" title="Link to this heading"></a></h2>
-<p>$ sacct –starttime 2023-11-1</p>
+<p>::code$ sacct –starttime 2023-11-1</p>
 <p>JobID           JobName  Partition  Account    AllocCPUS   State     ExitCode
 ———— ———- ———- ———- ———- ———- ——–234            hostname_+   a5000              2            FAILED     0:53
 234.batch      batch                           2            CANCELLED  0:53
@@ -323,8 +358,8 @@ cpu*         up   infinite      4   idle biocsv-01669L,biocsv-01670L,biocsv-0167
 </section>
 <section id="types-of-nodes">
 <h2>Types of Nodes:<a class="headerlink" href="#types-of-nodes" title="Link to this heading"></a></h2>
-<table class="docutils align-default" id="id4">
-<caption><span class="caption-text">Cluster Hardware</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Cluster Hardware</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 14.3%" />
@@ -410,26 +445,22 @@ Nodes are best used for interactive sessions, and non-GPU work</p>
 <section id="using-gpus-in-jobs">
 <h2>Using GPUs in jobs:<a class="headerlink" href="#using-gpus-in-jobs" title="Link to this heading"></a></h2>
 <p>example script:</p>
-<blockquote>
-<div><p>#!/bin/bash</p>
-<p>#SBATCH –partition=a5000 –nodelist=biocsv-01662L   –gres=gpu:3. #use 3 gpus for job</p>
-<blockquote>
-<div><p>srun –gres=gpu:1 hostname. #use 1 gpu for this command</p>
-</div></blockquote>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3. #use 3 gpus for job</span>
+ <span class="n">srun</span> <span class="o">--</span><span class="n">gres</span><span class="o">=</span><span class="n">gpu</span><span class="p">:</span><span class="mi">1</span> <span class="n">hostname</span><span class="o">.</span> <span class="c1">#use 1 gpu for this command</span>
+</pre></div>
+</div>
 <p><strong>Control where job output goes:</strong></p>
 <p>use –chdir=*your directory* to do work in your directory (can be mounted file system ie. /mnt/remote/user
 use –output=*your directory*/slurm-%j.out ie. /tmp/</p>
 <p>example script:</p>
-<blockquote>
-<div><p>#!/bin/bash</p>
-<p>#SBATCH –partition=a5000 –nodelist=biocsv-01662L   –gres=gpu:3</p>
-<p>#SBATCH –chdir=/mnt/remote</p>
-<p>#SBATCH –output=/tmp/slurm-%j.out</p>
-<blockquote>
-<div><p>srun –gres=gpu:1 hostname &gt;&gt; myfile.txt</p>
-</div></blockquote>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --partition=a5000 --nodelist=biocsv-01662L   --gres=gpu:3</span>
+<span class="c1">#SBATCH --chdir=/mnt/remote</span>
+<span class="c1">#SBATCH --output=/tmp/slurm-%j.out</span>
+<span class="n">srun</span> <span class="o">--</span><span class="n">gres</span><span class="o">=</span><span class="n">gpu</span><span class="p">:</span><span class="mi">1</span> <span class="n">hostname</span> <span class="o">&gt;&gt;</span> <span class="n">myfile</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
 <p><strong>*SSH instructions: *</strong></p>
 <p>Some users will be able to access the main Slurm login node via SSH to run commands. To request this access please email <a class="reference external" href="mailto:cryoem&#37;&#52;&#48;biochem&#46;wisc&#46;edu">cryoem<span>&#64;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a></p>
 <div class="line-block">
