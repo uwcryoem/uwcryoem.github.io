@@ -59,6 +59,7 @@ UW-Madison cryo-EM HPC
    Imod <SupportedSoftware/Imod>
    Aretomo <SupportedSoftware/Aretomo>
    Chimera(x) <SupportedSoftware/Chimera> 
+   Cryosparc <SupportedSoftware/Cryosparc>
 
 .. toctree::
    :maxdepth: 2
