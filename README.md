@@ -2,6 +2,8 @@
 
 UW-Madison Cryo-EM HPC computing GitHub IO documentation site source.
 
+See the site in action at [https://uwcryoem.github.io](https://uwcryoem.github.io).
+
 ## How to use
 
 This documentation site uses Sphinx Docs to generate from the [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer) Rich Text Formatting. Sphinx can also use the [Markdown](https://daringfireball.net/projects/markdown/) formatted text as a source with the 'myst_parser' extension.
