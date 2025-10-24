@@ -56,6 +56,7 @@ UW-Madison cryo-EM HPC
    Licensing <SupportedSoftware/Licensing>
    Relion <SupportedSoftware/Relion>
    Matlab <SupportedSoftware/Matlab> 
+   Jupyter Notebook <SupportedSoftware/Jupyter>
    Imod <SupportedSoftware/Imod>
    Aretomo <SupportedSoftware/Aretomo>
    Chimera(x) <SupportedSoftware/Chimera> 
