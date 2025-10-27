@@ -22,7 +22,7 @@ Examples:
    :width: 600
    :alt: Image of a Jupyter Notebook running simple commands including printing a line of text, preforming simple math and running multipe lines of code at once.
 
-To save your notebook click the save icon near the top of the screen or choose "Save and checkpoint" under the file menu. Your notebook will be saved as an ipnyb file that can be shared with otherrs. 
+To save your notebook click the save icon near the top of the screen or choose "Save and checkpoint" under the file menu. Your notebook will be saved as an ipynb file that can be shared with others. 
 
 
 For more information about using Jupyter notebook, see the link below.
