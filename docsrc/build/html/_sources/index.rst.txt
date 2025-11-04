@@ -63,8 +63,10 @@ UW-Madison cryo-EM HPC
    Cryosparc <SupportedSoftware/Cryosparc>
 
 .. toctree::
+   :titlesonly:
    :maxdepth: 2
-   :caption: Training and FAQs 
+   :caption: Training and FAQs
+
    Videos <TrainingAndFaqs/Videos>
-   Training  <TrainingAndFaqs/Training>    
+   Training  <TrainingAndFaqs/Training>
    Frequently Asked Questions <TrainingAndFaqs/Faqs>
