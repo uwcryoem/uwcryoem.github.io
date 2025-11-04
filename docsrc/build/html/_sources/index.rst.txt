@@ -65,6 +65,6 @@ UW-Madison cryo-EM HPC
 .. toctree::
    :maxdepth: 2
    :caption: Training and FAQs 
-
+   Videos <TrainingAndFaqs/Videos>
    Training  <TrainingAndFaqs/Training>    
    Frequently Asked Questions <TrainingAndFaqs/Faqs>
