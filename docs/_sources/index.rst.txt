@@ -43,7 +43,8 @@ UW-Madison cryo-EM HPC
    Monitoring Jobs <OpenOndemand/MonitoringJobs>
    Remote Desktop <OpenOndemand/RemoteDesktop>
    Shell Access <OpenOndemand/ShellAccess>
-   Other Applications <OpenOndemand/OtherApplications>
+   Open Composer <OpenOndemand/OpenComposer>
+   Other Applications <OpenOndemand/OtherApplications>   
    Logging out <OpenOndemand/Logout> 
     
 
