@@ -22,6 +22,6 @@ Open Composer Quick Start Guide
 
 	* Job Name (optional) - Select a name for your job. This name will show up as on the Job History page.
 
-	* Partition: Select the partition you'd like the job to run on. Partition hardware information is `here <https://uwcryoem.github.io/GettingStarted/Hardware.html>`_.
+	* Partition: Select the partition you'd like the job to run on. For jobs requiring a GPU you should use the a100, a5000, or gpu queue. For jobs requiring only cpus, choose the cpu queue. Partition hardware information is `here <https://uwcryoem.github.io/GettingStarted/Hardware.html>`_.
 
-	* Number of Cores: Select the number of cores you'd like for your job. 
+	* Number of Cores: Select the number of CPU cores you'd like for your job. 
