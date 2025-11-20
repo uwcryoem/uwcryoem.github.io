@@ -28,8 +28,8 @@ Most inquiries will be responded to within hours. The HPC cluster team aims to r
 
 **Guidelines for Use:**
 
-    Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the login node.
-    User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/NetID.
+    Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the control node.
+    User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/*username*.
     Data should be transferred to the cluster via Globus. Instructions for this are `here. <https://uwcryoem.github.io/GettingStarted/Storage.html>`_
 
 **Software:**
@@ -52,14 +52,14 @@ Most inquiries will be responded to within hours. The HPC cluster team aims to r
 
 **Resource Policies:**
 
-    The login node should be used to submit jobs to worker nodes. Memory or cpu intensive jobs should not be run on the login node. Any user using significant resources on the login node will be given a warning or have their account locked.
+    The control node should be used to submit jobs to worker nodes. Memory or cpu intensive jobs should not be run on the control node. Any user using significant resources on the control node will be given a warning or have their account locked.
     Large datasets should be removed from the cluster storage when jobs are complete. Cluster space will be audited periodically and users storing a large amount of data will be contacted.
     Users may store up to 5TB of data in the cluster. Temporary exceptions to this rule may be granted.
     Data storage will periodically be audited on the cluster. Users will be asked to move data if it has not been accessed in more than one month.
 
 **Reservations:**
 
-   For time-sensitive jobs, cluster reservations may be granted. Reservations can include specific nodes or partitions in a specific time frame. E-mail cryoem@biochem.wisc.edu to request a reservation.
+   For time-sensitive jobs, cluster reservations may be granted. Reservations can include specific nodes or queues for a specific time frame. E-mail cryoem@biochem.wisc.edu to request a reservation.
 
 **Miscellaneous Policies:**
 

@@ -137,8 +137,8 @@
 </div></blockquote>
 <p><strong>Guidelines for Use:</strong></p>
 <blockquote>
-<div><p>Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the login node.
-User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/NetID.
+<div><p>Processing-intensive (and GPU-requiring) jobs must be run on the compute nodes and never on the control node.
+User data should be stored in your home directory. For UW users this is  /mnt/hpc_users/home/<em>username</em>.
 Data should be transferred to the cluster via Globus. Instructions for this are <a class="reference external" href="https://uwcryoem.github.io/GettingStarted/Storage.html">here.</a></p>
 </div></blockquote>
 <p><strong>Software:</strong></p>
@@ -161,14 +161,14 @@ During maintenance periods, currently running jobs will be suspended.  When main
 </div></blockquote>
 <p><strong>Resource Policies:</strong></p>
 <blockquote>
-<div><p>The login node should be used to submit jobs to worker nodes. Memory or cpu intensive jobs should not be run on the login node. Any user using significant resources on the login node will be given a warning or have their account locked.
+<div><p>The control node should be used to submit jobs to worker nodes. Memory or cpu intensive jobs should not be run on the control node. Any user using significant resources on the control node will be given a warning or have their account locked.
 Large datasets should be removed from the cluster storage when jobs are complete. Cluster space will be audited periodically and users storing a large amount of data will be contacted.
 Users may store up to 5TB of data in the cluster. Temporary exceptions to this rule may be granted.
 Data storage will periodically be audited on the cluster. Users will be asked to move data if it has not been accessed in more than one month.</p>
 </div></blockquote>
 <p><strong>Reservations:</strong></p>
 <blockquote>
-<div><p>For time-sensitive jobs, cluster reservations may be granted. Reservations can include specific nodes or partitions in a specific time frame. E-mail <a class="reference external" href="mailto:cryoem&#37;&#52;&#48;biochem&#46;wisc&#46;edu">cryoem<span>&#64;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a> to request a reservation.</p>
+<div><p>For time-sensitive jobs, cluster reservations may be granted. Reservations can include specific nodes or queues for a specific time frame. E-mail <a class="reference external" href="mailto:cryoem&#37;&#52;&#48;biochem&#46;wisc&#46;edu">cryoem<span>&#64;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a> to request a reservation.</p>
 </div></blockquote>
 <p><strong>Miscellaneous Policies:</strong></p>
 <blockquote>
