@@ -68,6 +68,7 @@ UW-Madison cryo-EM HPC
    :maxdepth: 2
    :caption: Training and FAQs
 
+   Troubleshooting <TrainingAndFaqs/Troubleshooting>
    Videos <TrainingAndFaqs/Videos>
    Training  <TrainingAndFaqs/Training>
    Frequently Asked Questions <TrainingAndFaqs/Faqs>
