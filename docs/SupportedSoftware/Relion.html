@@ -157,6 +157,90 @@ Defaults such as the number of nodes (hosts) should be 1, and can be changed to 
 CPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_cpu_mpi.sh</p>
 </dd>
 </dl>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Suggested Relion Settings</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 41.7%" />
+<col style="width: 41.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Job types for HPC submissions</p></th>
+<th class="head"><p>Suggested MPI and Threads</p></th>
+<th class="head"><p>Queue</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Motion correction (RELION’s own)</p></td>
+<td><p>20-60 MPI, 1 thread</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-odd"><td><p>CTF estimation</p></td>
+<td><p>20-60 MPI, 1 thread</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-even"><td><p>Auto-picking</p></td>
+<td><p>Training of topaz is not parallelised and should always be performed with a single MPI process (Use 1 MPI per CPU core, 1 thread per MPI). Picking with topaz has been parallelised and can be run using multiple MPI processes. For picking you can apply as many as 4x MPI per server node each getting 1 GPU assigned and you can run across multiple compute nodes.</p></td>
+<td><p>a5000 or a100</p></td>
+</tr>
+<tr class="row-odd"><td><p>Particle extraction</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>2D classification</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>3D initial model</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-even"><td><p>3D classification</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>3D auto-refine</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-even"><td><p>3D multi-body</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>CTF refinesment</p></td>
+<td><p>Cpu-only, multiple threads per MPI and all available cpu cores</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-even"><td><p>Bayesian polishing</p></td>
+<td><p>Cpu-only, multiple threads per MPI and all avaialble cpu cores</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mask creation</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Join star files</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Particle subtraction</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Post-processing</p></td>
+<td><p>Cpu-only, multiple threads per MPI and all available cpu cores</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-odd"><td><p>Local resolution</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>External</p></td>
+<td><p>External processes; depends on job</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="simple">
 <dt>Suggestions for MPI and threads Jobs types for HPC submissions  Suggested MPI and Threads</dt><dd><p>Queue</p>
 </dd>

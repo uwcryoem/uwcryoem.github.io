@@ -61,8 +61,9 @@ RELION with MPI on multiple nodes
 
 
 .. list-table:: Suggested Relion Settings
-   :widths: 25 50 25
+   :widths: 25 25 10
    :header-rows: 1
+   
    * - Job types for HPC submissions
      - Suggested MPI and Threads
      - Queue
