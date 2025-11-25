@@ -67,6 +67,7 @@ RELION with MPI on multiple nodes
    * - Job types for HPC submissions
      - Suggested MPI and Threads
      - Queue
+   
    * - Motion correction (RELION's own)
      - 20-60 MPI, 1 thread
      - cpu
@@ -74,11 +75,11 @@ RELION with MPI on multiple nodes
      - 20-60 MPI, 1 thread
      - cpu
    * - Auto-picking
-     - Training of topaz is not parallelised and should always be performed with a single MPI process (Use 1 MPI per CPU core, 1 thread per MPI). Picking with topaz has been parallelised and can be run using multiple MPI processes. For picking you can apply as many as 4x MPI per server node each getting 1 GPU assigned and you can run across multiple compute nodes.
+     - ""
      - a5000 or a100
    *  - Particle extraction
-      - 
-      - 
+      - ""
+      - ""
    *  - 2D classification
       - 5 MPI, 12 threads, GPU enabled
       - a5000 
@@ -101,23 +102,23 @@ RELION with MPI on multiple nodes
       - Cpu-only, multiple threads per MPI and all avaialble cpu cores     
       - cpu
    *  - Mask creation
-      -
-      - 
+      - ""
+      - ""
    *  - Join star files   
-      - 
-      -
+      - ""
+      - ""
    *  - Particle subtraction
-      - 
-      - 
+      - ""
+      - ""
    *  - Post-processing
       - Cpu-only, multiple threads per MPI and all available cpu cores
       - cpu 
    *  - Local resolution
-      - 
-      - 
+      - ""
+      - ""
    *  - External
       - External processes; depends on job 
-      - 
+      - ""
 
 
 Suggestions for MPI and threads Jobs types for HPC submissions 	Suggested MPI and Threads
