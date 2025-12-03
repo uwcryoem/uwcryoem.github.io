@@ -21,7 +21,7 @@ extensions = [
 "sphinxcontrib.googleanalytics"
 ]
 
-googleanalytics_id = "G-31198844"
+googleanalytics_id = "G-SR8N16RVTC"
 templates_path = ['_templates']
 exclude_patterns = []
 html_show_sourcelink = False
