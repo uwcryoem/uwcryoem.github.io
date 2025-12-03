@@ -16,7 +16,9 @@ release = '1.0'
 
 extensions = [
 "sphinx_rtd_theme",
-"sphinx_toolbox.collapse"
+"sphinx_toolbox.collapse",
+"sphinxcontrib.video"
+
 ]
 
 

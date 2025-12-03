@@ -15,7 +15,7 @@
     </script>
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Troubleshooting &mdash; UW-Madison Cryo-EM HPC 1.0 documentation</title>
+  <title>Using X11 with the HPC cluster &mdash; UW-Madison Cryo-EM HPC 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -27,9 +27,7 @@
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Training Video" href="Videos.html" />
-    <link rel="prev" title="Cryosparc" href="../SupportedSoftware/Cryosparc.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -81,21 +79,21 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Supported Software</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Licensing.html">Licensing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Relion.html">Relion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Matlab.html">Matlab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Jupyter.html">Jupyter Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Imod.html">Imod</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Aretomo.html">Aretomo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Chimera.html">Chimera(x)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Cryosparc.html">Cryosparc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Licensing.html">Licensing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Relion.html">Relion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Matlab.html">Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jupyter.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Imod.html">Imod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Aretomo.html">Aretomo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chimera.html">Chimera(x)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cryosparc.html">Cryosparc</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Training and FAQs</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Videos.html">Videos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Training.html">Training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Faqs.html">Frequently Asked Questions</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Videos.html">Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Training.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Faqs.html">Frequently Asked Questions</a></li>
 </ul>
 
         </div>
@@ -112,7 +110,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Troubleshooting</li>
+      <li class="breadcrumb-item active">Using X11 with the HPC cluster</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -121,20 +119,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="troubleshooting">
-<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h1>
-<p>Login errors:</p>
-<a class="reference internal image-reference" href="../_images/login_error.png"><img alt="Image of Open OnDemand login error." src="../_images/login_error.png" style="width: 600px;" />
-</a>
+  <section id="using-x11-with-the-hpc-cluster">
+<h1>Using X11 with the HPC cluster<a class="headerlink" href="#using-x11-with-the-hpc-cluster" title="Link to this heading"></a></h1>
+<p>What is X11?</p>
+<p>X11 is a way to forward graphical programs over SSH. This allows you to interact with sofware such as Relion from</p>
+<p>How to use X11 to run graphical software over ssh?
+1. Make sure XQuartz is installed and running on your Mac.
+2. Ssh into the cluster with the -YC command line option like so: ssh <a class="reference external" href="mailto:username&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">username<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a> -YC
+3.</p>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../SupportedSoftware/Cryosparc.html" class="btn btn-neutral float-left" title="Cryosparc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Videos.html" class="btn btn-neutral float-right" title="Training Video" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

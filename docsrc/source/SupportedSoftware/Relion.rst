@@ -120,38 +120,6 @@ RELION with MPI on multiple nodes
       - External processes; depends on job 
       - ""
 
-
-Suggestions for MPI and threads Jobs types for HPC submissions 	Suggested MPI and Threads
-	Queue
-
-Motion correction (RELION's Own) 	Use high count of MPI (20-60), only 1 thread per. 	cpu
-CTF estimation
-Use high count of MPI (20-60), only 1 thread per.
-cpu
-Auto-picking 	Training of topaz is not parallelised and should always be performed with a single MPI process (Use 1 MPI per CPU core, 1 thread per MPI). Picking with topaz has been parallelised and can be run using multiple MPI processes. For picking you can apply as many as 4x MPI per server node each getting 1 GPU assigned and you can run across multiple compute nodes. 	a5000 or a100
-Particle extraction 		
-2D classification 	5 MPI, 12 threads, GPU enabled 	a5000
-3D initial model 	5 MPI, 12 threads, GPU enabled 	a5000
-3D classification 	5 MPI, 12 threads, GPU enabled 	a5000
-3D auto-refine 	5 MPI, 12 threads, GPU enabled  	a5000
-3D multi-body 	5 MPI, 12 threads, GPU enabled 	a5000
-CTF refinement 	CPU-only job, use multiple threads per MPI and use all available CPU cores. 	cpu
-Bayesian polishing 	CPU-only job, use multiple threads per MPI and use all available CPU cores. 	cpu
-Mask creation 		
-Join star files 		
-Particle subtraction 		
-Post-processing 	CPU-only job, use multiple threads per MPI and use all available CPU cores. 	cpu
-Local resolution 		
-External 	External processes and depends on job. 	
-GPU accelerated jobs Jobs that support GPU acceleration
-Auto-picking
-2D classification
-3D initial model
-3D classification
-3D auto-refine
-3D multi-body
-Other information
-
 **Setup X11 forwarding**
 
 If the UI doesn't launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.

@@ -1,0 +1,13 @@
+Using X11 with the HPC cluster
+=================================
+
+
+What is X11?
+
+X11 is a way to forward graphical programs over SSH. This allows you to interact with sofware such as Relion from 
+
+How to use X11 to run graphical software over ssh?
+1. Make sure XQuartz is installed and running on your Mac.
+2. Ssh into the cluster with the -YC command line option like so: ssh username@cryoemcluster.biochem.wisc.edu -YC
+3. 
+
