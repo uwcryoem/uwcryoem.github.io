@@ -2,12 +2,17 @@ Using X11 with the HPC cluster
 =================================
 
 
-What is X11?
+**What is X11?**
 
-X11 is a way to forward graphical programs over SSH. This allows you to interact with sofware such as Relion from 
+X11 is a way to forward graphical programs over SSH. This allows you to remotely start graphical software from a remote terminal session.
+In order to use X11, software must be installed. For Mac we recommend `XQuartz <https://www.xquartz.org/>`_. For Windows we recommend using `Putty <https://putty.org/index.html>`_. for ssh and `VcXsrv <https://vcxsrv.com/>`_. for X11.
 
-How to use X11 to run graphical software over ssh?
-1. Make sure XQuartz is installed and running on your Mac.
-2. Ssh into the cluster with the -YC command line option like so: ssh username@cryoemcluster.biochem.wisc.edu -YC
-3. 
+
+
+
+**How to use X11 to run graphical software over ssh?**
+
+#. Make sure an X11 program is installed and running on your computer.
+#. Ssh into the cluster with the -YC command line option like so: ssh username@cryoemcluster.biochem.wisc.edu -YC
+#. Enter the command to run the software.  
 

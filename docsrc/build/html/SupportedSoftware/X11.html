@@ -27,7 +27,9 @@
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Troubleshooting" href="../TrainingAndFaqs/Troubleshooting.html" />
+    <link rel="prev" title="Cryosparc" href="Cryosparc.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -78,7 +80,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/Logout.html">Logging out</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Supported Software</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Licensing.html">Licensing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Relion.html">Relion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matlab.html">Matlab</a></li>
@@ -87,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Aretomo.html">Aretomo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chimera.html">Chimera(x)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cryosparc.html">Cryosparc</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">X11</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Training and FAQs</span></p>
 <ul>
@@ -121,18 +124,24 @@
              
   <section id="using-x11-with-the-hpc-cluster">
 <h1>Using X11 with the HPC cluster<a class="headerlink" href="#using-x11-with-the-hpc-cluster" title="Link to this heading"></a></h1>
-<p>What is X11?</p>
-<p>X11 is a way to forward graphical programs over SSH. This allows you to interact with sofware such as Relion from</p>
-<p>How to use X11 to run graphical software over ssh?
-1. Make sure XQuartz is installed and running on your Mac.
-2. Ssh into the cluster with the -YC command line option like so: ssh <a class="reference external" href="mailto:username&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">username<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a> -YC
-3.</p>
+<p><strong>What is X11?</strong></p>
+<p>X11 is a way to forward graphical programs over SSH. This allows you to remotely start graphical software from a remote terminal session.
+In order to use X11, software must be installed. For Mac we recommend <a class="reference external" href="https://www.xquartz.org/">XQuartz</a>. For Windows we recommend using <a class="reference external" href="https://putty.org/index.html">Putty</a>. for ssh and <a class="reference external" href="https://vcxsrv.com/">VcXsrv</a>. for X11.</p>
+<p><strong>How to use X11 to run graphical software over ssh?</strong></p>
+<ol class="arabic simple">
+<li><p>Make sure an X11 program is installed and running on your computer.</p></li>
+<li><p>Ssh into the cluster with the -YC command line option like so: ssh <a class="reference external" href="mailto:username&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">username<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a> -YC</p></li>
+<li><p>Enter the command to run the software.</p></li>
+</ol>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Cryosparc.html" class="btn btn-neutral float-left" title="Cryosparc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../TrainingAndFaqs/Troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

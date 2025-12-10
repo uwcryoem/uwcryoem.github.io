@@ -89,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Aretomo.html">Aretomo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chimera.html">Chimera(x)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cryosparc.html">Cryosparc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="X11.html">X11</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Training and FAQs</span></p>
 <ul>
@@ -145,12 +146,19 @@
 <a class="reference internal image-reference" href="../_images/relionCursor.png"><img alt="Image showing changing the cursor settings to start the Relion application." src="../_images/relionCursor.png" style="width: 600px;" />
 </a>
 <p><strong>Interactive Desktop instructions:</strong></p>
+<ol class="arabic simple">
+<li><p>In Open OnDemand open an interactive desktop session.</p></li>
+<li><p>In your desktop session, open a terminal window and type “Relion &amp;”, hit enter. In a few seconds the Relion application should open.</p></li>
+</ol>
 <p><strong>SSH instructions (authorized users):</strong></p>
-<p><strong>Start RELION and submit a job to the cluster:</strong></p>
+<ol class="arabic simple">
+<li><p>If you are an authorized SSH user, make sure you have an X11 window system program open. (see X11 documentation <a class="reference external" href="https://uwcryoem.github.io/SupportedSoftware/X11">here</a>: )</p></li>
+<li><p>Open a terminal window and type “ssh <a class="reference external" href="mailto:yourusername&#37;&#52;&#48;wisc">yourusername<span>&#64;</span>wisc</a>.edu&#64;cryoemcluster.biochem.wisc.edu -YC”, then press enter.</p></li>
+<li><p>Once logged in, navigate to your project directory and type “relion &amp;”. The Relion application should open. If you see errors they are likely related to X11. Please see X11 information linked above or contact cluster support.</p></li>
+</ol>
+<p><strong>Submit a Relion job to the cluster:</strong></p>
 <blockquote>
-<div><p>SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC <a class="reference external" href="mailto:user&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">user<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a>
-Navigate to your RELION project directory:  cd /mnt/hpc_users/user/relionproject
-Launch RELION with the following command: relion &amp;
+<div><p>Connect to the cluster and start Relion using one of the methods above.
 Fill in the parameters for the relion job you want to run
 On the Run tab, if the option Submit to queue is editable, change Submit to queue to Yes.
 Defaults such as the “Queue submit command” and “Queue name” should already be provided.:18
@@ -166,8 +174,8 @@ Defaults such as the number of nodes (hosts) should be 1, and can be changed to 
 CPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_cpu_mpi.sh</p>
 </dd>
 </dl>
-<table class="docutils align-default" id="id1">
-<caption><span class="caption-text">Suggested Relion Settings</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Suggested Relion Settings</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 41.7%" />
 <col style="width: 41.7%" />
@@ -250,15 +258,12 @@ CPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_cpu_mpi.sh</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Setup X11 forwarding</strong></p>
-<p>If the UI doesn’t launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.</p>
-<p>X11 forwarding KB article:</p>
 <p><strong>SLURM and continuing jobs</strong></p>
 <p>The RELION GUI will not correctly stop and restart HPC jobs when using ‘Continue!’ to change parameters.</p>
 <p>It is recommended that your first ‘Abort’ the currently running job, change parameters, and restart to avoid having multiple conflicting SLURM jobs running for the same RELION job.
 GPU choice</p>
 <p>Internal benchmark found slightly better performance with the NVIDIA A5000 GPU vs the A100 GPU with 3D Refinement jobs and the RELION tutorial dataset. We recommend with RELION to generally submit to the A5000 queue and reserve the A100 queue for machine learning applications.</p>
-<p>Using multiple nodes</p>
+<p>** Using multiple nodes</p>
 <p>We encourage using multiple nodes from the “a5000” queue to speed your jobs! If you have very long-running jobs, we may request that you restrict your number of nodes to allow other group members to run jobs simultaneously. If there are few cluster users at a time you may be able to make use of larger number of nodes in parallel.</p>
 <p>Policies for multiple-node usage may change over time as cluster usage increases.</p>
 <p><strong>Technical Notes</strong></p>

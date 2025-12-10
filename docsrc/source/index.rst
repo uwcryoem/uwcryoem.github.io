@@ -62,6 +62,7 @@ UW-Madison cryo-EM HPC
    Aretomo <SupportedSoftware/Aretomo>
    Chimera(x) <SupportedSoftware/Chimera> 
    Cryosparc <SupportedSoftware/Cryosparc>
+   X11 <SupportedSoftware/X11>
 
 .. toctree::
    :titlesonly:

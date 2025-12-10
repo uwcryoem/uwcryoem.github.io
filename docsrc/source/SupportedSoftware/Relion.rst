@@ -36,13 +36,19 @@ You should now see a small dot as a cursor that you can use to click the Yes but
 
 **Interactive Desktop instructions:**
 
+#. In Open OnDemand open an interactive desktop session. 
+#. In your desktop session, open a terminal window and type "Relion &", hit enter. In a few seconds the Relion application should open.
+
+
 **SSH instructions (authorized users):**
 
-**Start RELION and submit a job to the cluster:**
+#. If you are an authorized SSH user, make sure you have an X11 window system program open. (see X11 documentation `here <https://uwcryoem.github.io/SupportedSoftware/X11>`_: ) 
+#. Open a terminal window and type "ssh yourusername@wisc.edu@cryoemcluster.biochem.wisc.edu -YC", then press enter.
+#. Once logged in, navigate to your project directory and type "relion &". The Relion application should open. If you see errors they are likely related to X11. Please see X11 information linked above or contact cluster support. 
 
-    SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC user@cryoemcluster.biochem.wisc.edu
-    Navigate to your RELION project directory:  cd /mnt/hpc_users/user/relionproject
-    Launch RELION with the following command: relion &
+**Submit a Relion job to the cluster:**
+
+    Connect to the cluster and start Relion using one of the methods above.
     Fill in the parameters for the relion job you want to run
     On the Run tab, if the option Submit to queue is editable, change Submit to queue to Yes.
     Defaults such as the "Queue submit command" and "Queue name" should already be provided.:18
@@ -120,11 +126,7 @@ RELION with MPI on multiple nodes
       - External processes; depends on job 
       - ""
 
-**Setup X11 forwarding**
 
-If the UI doesn't launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.
-
-X11 forwarding KB article:
 
 **SLURM and continuing jobs**
 
@@ -135,7 +137,7 @@ GPU choice
 
 Internal benchmark found slightly better performance with the NVIDIA A5000 GPU vs the A100 GPU with 3D Refinement jobs and the RELION tutorial dataset. We recommend with RELION to generally submit to the A5000 queue and reserve the A100 queue for machine learning applications.
 
-Using multiple nodes
+** Using multiple nodes
 
 We encourage using multiple nodes from the "a5000" queue to speed your jobs! If you have very long-running jobs, we may request that you restrict your number of nodes to allow other group members to run jobs simultaneously. If there are few cluster users at a time you may be able to make use of larger number of nodes in parallel.
 
