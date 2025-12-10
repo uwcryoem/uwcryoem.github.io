@@ -16,3 +16,64 @@ In order to use X11, software must be installed. For Mac we recommend `XQuartz <
 #. Ssh into the cluster with the -YC command line option like so: ssh username@cryoemcluster.biochem.wisc.edu -YC
 #. Enter the command to run the software.  
 
+
+
+**X11 troubleshooting**
+
+
+#. 3dmod is an OpenGL-based 3D image renderer that is built into IMOD. 3dmod uses OpenGL GLX extensions - to run this application remotely via X11 forwarding on a Mac, you need to enable the iglx extension in XQuartz as below. This is a one-time setting change.
+
+    Open a Terminal
+    Enter this command:
+
+defaults write org.xquartz.X11 enable_iglx -bool true
+
+Then restart XQuartz, reconnect to the remote server and open IMOD or 3dmod again with your image.
+
+#. Supporting Chimera and remote direct rendering with GLX
+
+Chimera is an OpenGL-based 3D viewer and also requires OpenGL GLX extensions. Unlike 3dmod above, to successfully use Chimera remotely, it must use 'direct rendering' modes of X11 where rendering processes use the 'nvidia' driver and forwards rendered frames to the remote X11 server (XQuartz or other).
+
+Rocky Linux 8 and Rocky Linux 9 workstations had an issue here where this was failing from 2019 Intel MacBooks running XQuartz.
+
+8/27/2024: A server-side improvement found that to add an "/etc/profile/nvidia-glx.sh" bash script with this line:
+
+   export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
+The root of the issue is that the Linux Mesa OpenGL software was no longer selecting the NVIDIA driver first for ‘direct rendering’ on the remote Linux system hardware, and subsequently tried and failed to use a software renderer ‘swrast-dri’ that cannot provide the features Chimera requires for OpenGL. Last, it would try to run in an ‘indirect rendering’ mode where the rendering device is the card on the MacBook with XQuartz server running. 
+
+I found additionally that some versions of the NVIDIA drivers (v560.xx) break Chimera with mismatching bit depth or other mode issues. We are keeping Linux servers and workstations at the 550.90.07 drivers which are working with Chimera and 3dmod, the two difficult remote OpenGL GLX software along with the Mac XQuartz to make happy.
+
+Other issues: There is still a mismatching color/bit depth issue with Mac M1-M3 when trying remotely to run Chimera or `glxgears` remotely with the direct rendering. It is possibly this is related to but #31 below in XQuartz, and we could check if the same fix applies here.
+
+Other users report similar issues on Apple Silicon and it may not be possible to use the `nvidia` direct rendering. The solution for some of these is to instead use the __GLX_VENDOR_LIBRARY_NAME=mesa (forcing software based direct rendering, this does not work for Chimera).
+
+    https://unix.stackexchange.com/questions/676862/glxgears-gives-error-couldnt-get-an-rgb-double-buffered-visual-on-one-remote
+    https://knowledge.ps.uci.edu/books/greenplanet-software/page/x11-for-mac/revisions/230
+
+**Bugs**
+
+#. When connecting from Mac M3 MacBook to the remote server using SSH -YC and X11 forwarding via XQuartz, Etomo will render incorrectly. This appears to be an issue between the M1-M3 MacBooks and color formatting in XQuartz, and the result is a black background in Etomo that can make it difficult to see text.
+
+There is a workaround for these Mac M3 systems, which is to disable a rendering extension:
+
+    Open a terminal
+    Enter this command (one time to change a setting for XQuartz)
+
+defaults write org.xquartz.X11 enable_render_extension 0
+
+Then restart XQuartz, reconnect to the remote server and open the Etomo application.
+
+After making this change in disabling a render extension the coloring should now appear white in background. Potentially there may be side-effects for performance in this or other applications after disabling the render extension.
+Bug: Mac M1-M3 issues with fonts and labels
+
+#. When viewing on 3dmod, remotely in X11 forwarding to Mac M2 - the 3dmod window is not showing labels for scale bars correctly.
+
+Work-around is not yet available.
+
+#. GitHub for XQuartz has outstanding bugs and issues threads
+
+    Indirect GLX not functioning in some cases #144 https://github.com/XQuartz/XQuartz/issues/144
+    Apple Silicon black background #31https://github.com/XQuartz/XQuartz/issues/31
+
+Many of these bugs and issues date back as far as 2021 or earlier and XQuartz is not actively supported by Apple.
