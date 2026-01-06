@@ -16,10 +16,12 @@ release = '1.0'
 
 extensions = [
 "sphinx_rtd_theme",
-"sphinx_toolbox.collapse"
+"sphinx_toolbox.collapse",
+"sphinxcontrib.video",
+"sphinxcontrib.googleanalytics"
 ]
 
-
+googleanalytics_id = "G-SBWMHN8ZM5"
 templates_path = ['_templates']
 exclude_patterns = []
 html_show_sourcelink = False

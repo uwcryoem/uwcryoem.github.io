@@ -5,6 +5,15 @@
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBWMHN8ZM5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SBWMHN8ZM5');
+    </script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RELION &mdash; UW-Madison Cryo-EM HPC 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
@@ -66,6 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/MonitoringJobs.html">Monitoring Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/RemoteDesktop.html">Remote Desktop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/ShellAccess.html">Shell Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/OpenComposer.html">Open Composer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/OtherApplications.html">Other Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/Logout.html">Logging out</a></li>
 </ul>
@@ -74,13 +84,17 @@
 <li class="toctree-l1"><a class="reference internal" href="Licensing.html">Licensing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Relion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matlab.html">Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jupyter.html">Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Imod.html">Imod</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aretomo.html">Aretomo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chimera.html">Chimera(x)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Cryosparc.html">Cryosparc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="X11.html">X11</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Training and FAQs</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Videos.html">Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Faqs.html">Frequently Asked Questions</a></li>
 </ul>
@@ -132,12 +146,19 @@
 <a class="reference internal image-reference" href="../_images/relionCursor.png"><img alt="Image showing changing the cursor settings to start the Relion application." src="../_images/relionCursor.png" style="width: 600px;" />
 </a>
 <p><strong>Interactive Desktop instructions:</strong></p>
+<ol class="arabic simple">
+<li><p>In Open OnDemand open an interactive desktop session.</p></li>
+<li><p>In your desktop session, open a terminal window and type “Relion &amp;”, hit enter. In a few seconds the Relion application should open.</p></li>
+</ol>
 <p><strong>SSH instructions (authorized users):</strong></p>
-<p><strong>Start RELION and submit a job to the cluster:</strong></p>
+<ol class="arabic simple">
+<li><p>If you are an authorized SSH user, make sure you have an X11 window system program open. (see X11 documentation <a class="reference external" href="https://uwcryoem.github.io/SupportedSoftware/X11">here</a>: )</p></li>
+<li><p>Open a terminal window and type “ssh <a class="reference external" href="mailto:yourusername&#37;&#52;&#48;wisc">yourusername<span>&#64;</span>wisc</a>.edu&#64;cryoemcluster.biochem.wisc.edu -YC”, then press enter.</p></li>
+<li><p>Once logged in, navigate to your project directory and type “relion &amp;”. The Relion application should open. If you see errors they are likely related to X11. Please see X11 information linked above or contact cluster support.</p></li>
+</ol>
+<p><strong>Submit a Relion job to the cluster:</strong></p>
 <blockquote>
-<div><p>SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC <a class="reference external" href="mailto:user&#37;&#52;&#48;cryoemcluster&#46;biochem&#46;wisc&#46;edu">user<span>&#64;</span>cryoemcluster<span>&#46;</span>biochem<span>&#46;</span>wisc<span>&#46;</span>edu</a>
-Navigate to your RELION project directory:  cd /mnt/hpc_users/user/relionproject
-Launch RELION with the following command: relion &amp;
+<div><p>Connect to the cluster and start Relion using one of the methods above.
 Fill in the parameters for the relion job you want to run
 On the Run tab, if the option Submit to queue is editable, change Submit to queue to Yes.
 Defaults such as the “Queue submit command” and “Queue name” should already be provided.:18
@@ -152,45 +173,97 @@ Defaults such as the number of nodes (hosts) should be 1, and can be changed to 
 <dt>RELION with MPI on multiple nodes</dt><dd><p>GPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_gpu_mpi.sh
 CPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_cpu_mpi.sh</p>
 </dd>
-<dt>Suggestions for MPI and threads Jobs types for HPC submissions  Suggested MPI and Threads</dt><dd><p>Queue</p>
-</dd>
 </dl>
-<p>Motion correction (RELION’s Own)        Use high count of MPI (20-60), only 1 thread per.       cpu
-CTF estimation
-Use high count of MPI (20-60), only 1 thread per.
-cpu
-Auto-picking    Training of topaz is not parallelised and should always be performed with a single MPI process (Use 1 MPI per CPU core, 1 thread per MPI). Picking with topaz has been parallelised and can be run using multiple MPI processes. For picking you can apply as many as 4x MPI per server node each getting 1 GPU assigned and you can run across multiple compute nodes.         a5000 or a100
-Particle extraction
-2D classification       5 MPI, 12 threads, GPU enabled  a5000
-3D initial model        5 MPI, 12 threads, GPU enabled  a5000
-3D classification       5 MPI, 12 threads, GPU enabled  a5000
-3D auto-refine  5 MPI, 12 threads, GPU enabled          a5000
-3D multi-body   5 MPI, 12 threads, GPU enabled  a5000
-CTF refinement  CPU-only job, use multiple threads per MPI and use all available CPU cores.     cpu
-Bayesian polishing      CPU-only job, use multiple threads per MPI and use all available CPU cores.     cpu
-Mask creation
-Join star files
-Particle subtraction
-Post-processing         CPU-only job, use multiple threads per MPI and use all available CPU cores.     cpu
-Local resolution
-External        External processes and depends on job.
-GPU accelerated jobs Jobs that support GPU acceleration
-Auto-picking
-2D classification
-3D initial model
-3D classification
-3D auto-refine
-3D multi-body
-Other information</p>
-<p><strong>Setup X11 forwarding</strong></p>
-<p>If the UI doesn’t launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.</p>
-<p>X11 forwarding KB article:</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Suggested Relion Settings</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 41.7%" />
+<col style="width: 41.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Job types for HPC submissions</p></th>
+<th class="head"><p>Suggested MPI and Threads</p></th>
+<th class="head"><p>Queue</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Motion correction (RELION’s own)</p></td>
+<td><p>20-60 MPI, 1 thread</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-odd"><td><p>CTF estimation</p></td>
+<td><p>20-60 MPI, 1 thread</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-even"><td><p>Auto-picking</p></td>
+<td><p>“”</p></td>
+<td><p>a5000 or a100</p></td>
+</tr>
+<tr class="row-odd"><td><p>Particle extraction</p></td>
+<td><p>“”</p></td>
+<td><p>“”</p></td>
+</tr>
+<tr class="row-even"><td><p>2D classification</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>3D initial model</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-even"><td><p>3D classification</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>3D auto-refine</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-even"><td><p>3D multi-body</p></td>
+<td><p>5 MPI, 12 threads, GPU enabled</p></td>
+<td><p>a5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>CTF refinesment</p></td>
+<td><p>Cpu-only, multiple threads per MPI and all available cpu cores</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-even"><td><p>Bayesian polishing</p></td>
+<td><p>Cpu-only, multiple threads per MPI and all avaialble cpu cores</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mask creation</p></td>
+<td><p>“”</p></td>
+<td><p>“”</p></td>
+</tr>
+<tr class="row-even"><td><p>Join star files</p></td>
+<td><p>“”</p></td>
+<td><p>“”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Particle subtraction</p></td>
+<td><p>“”</p></td>
+<td><p>“”</p></td>
+</tr>
+<tr class="row-even"><td><p>Post-processing</p></td>
+<td><p>Cpu-only, multiple threads per MPI and all available cpu cores</p></td>
+<td><p>cpu</p></td>
+</tr>
+<tr class="row-odd"><td><p>Local resolution</p></td>
+<td><p>“”</p></td>
+<td><p>“”</p></td>
+</tr>
+<tr class="row-even"><td><p>External</p></td>
+<td><p>External processes; depends on job</p></td>
+<td><p>“”</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>SLURM and continuing jobs</strong></p>
 <p>The RELION GUI will not correctly stop and restart HPC jobs when using ‘Continue!’ to change parameters.</p>
 <p>It is recommended that your first ‘Abort’ the currently running job, change parameters, and restart to avoid having multiple conflicting SLURM jobs running for the same RELION job.
 GPU choice</p>
 <p>Internal benchmark found slightly better performance with the NVIDIA A5000 GPU vs the A100 GPU with 3D Refinement jobs and the RELION tutorial dataset. We recommend with RELION to generally submit to the A5000 queue and reserve the A100 queue for machine learning applications.</p>
-<p>Using multiple nodes</p>
+<p>** Using multiple nodes</p>
 <p>We encourage using multiple nodes from the “a5000” queue to speed your jobs! If you have very long-running jobs, we may request that you restrict your number of nodes to allow other group members to run jobs simultaneously. If there are few cluster users at a time you may be able to make use of larger number of nodes in parallel.</p>
 <p>Policies for multiple-node usage may change over time as cluster usage increases.</p>
 <p><strong>Technical Notes</strong></p>

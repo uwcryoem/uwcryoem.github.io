@@ -78,3 +78,14 @@ If you want to import a project:
    :alt: Image of the CryoSPARC attach project option.
    
 You may hit an error about a lock file, if you have directly copied this project without detaching from the original CryoSPARC instance. CryoSPARC will try to prevent the same folder from being attached simultaneously to two instances of CryoSPARC at the same time. The CryoSPARC project may have a `cs.lock` file, if so, remove this lock file and retry to "Attach Project" via CryoSPARC in the new instance. 
+
+=======
+Cryosparc is a data processing platform for Cryo-EM data. Users must obtain their own Cryosparc licenses to use Cryosparc on the UW-Madison cryo-EM HPC.
+
+
+
+Additional Cryosparc Resources: 
+*********************
+1. Cryosparc Guide `<https://guide.cryosparc.com/>`_
+2. Cryosparc Tutorials `<https://guide.cryosparc.com/processing-data/tutorials-and-case-studies/>`_
+

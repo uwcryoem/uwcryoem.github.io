@@ -43,7 +43,8 @@ UW-Madison cryo-EM HPC
    Monitoring Jobs <OpenOndemand/MonitoringJobs>
    Remote Desktop <OpenOndemand/RemoteDesktop>
    Shell Access <OpenOndemand/ShellAccess>
-   Other Applications <OpenOndemand/OtherApplications>
+   Open Composer <OpenOndemand/OpenComposer>
+   Other Applications <OpenOndemand/OtherApplications>   
    Logging out <OpenOndemand/Logout> 
     
 
@@ -56,14 +57,19 @@ UW-Madison cryo-EM HPC
    Licensing <SupportedSoftware/Licensing>
    Relion <SupportedSoftware/Relion>
    Matlab <SupportedSoftware/Matlab> 
+   Jupyter Notebook <SupportedSoftware/Jupyter>
    Imod <SupportedSoftware/Imod>
    Aretomo <SupportedSoftware/Aretomo>
    Chimera(x) <SupportedSoftware/Chimera> 
    Cryosparc <SupportedSoftware/Cryosparc>
+   X11 <SupportedSoftware/X11>
 
 .. toctree::
+   :titlesonly:
    :maxdepth: 2
-   :caption: Training and FAQs 
+   :caption: Training and FAQs
 
-   Training  <TrainingAndFaqs/Training>    
+   Troubleshooting <TrainingAndFaqs/Troubleshooting>
+   Videos <TrainingAndFaqs/Videos>
+   Training  <TrainingAndFaqs/Training>
    Frequently Asked Questions <TrainingAndFaqs/Faqs>

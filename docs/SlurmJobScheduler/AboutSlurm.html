@@ -5,6 +5,15 @@
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBWMHN8ZM5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SBWMHN8ZM5');
+    </script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Slurm &mdash; UW-Madison Cryo-EM HPC 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
@@ -66,6 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/MonitoringJobs.html">Monitoring Jobs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/RemoteDesktop.html">Remote Desktop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/ShellAccess.html">Shell Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/OpenComposer.html">Open Composer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/OtherApplications.html">Other Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenOndemand/Logout.html">Logging out</a></li>
 </ul>
@@ -74,13 +84,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Licensing.html">Licensing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Relion.html">Relion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Matlab.html">Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Jupyter.html">Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Imod.html">Imod</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Aretomo.html">Aretomo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Chimera.html">Chimera(x)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/Cryosparc.html">Cryosparc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SupportedSoftware/X11.html">X11</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Training and FAQs</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Videos.html">Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Faqs.html">Frequently Asked Questions</a></li>
 </ul>
@@ -113,9 +127,9 @@
 <p>Slurm is an open-source job scheduling and management tool for Linux clusters. Slurm has three key functions. First, it allocates access to resources (compute nodes) to users so they can perform work. Second, it provides a framework for starting, executing, and monitoring work on the set of compute nodes. Finally, it manages a queue of pending work.</p>
 <p>Definitions:</p>
 <p>Cluster – set of computers for high-performance computing</p>
-<p>Head node – computer from which users can submit jobs</p>
+<p>Control node – computer from which users can submit jobs</p>
 <p>Compute nodes – computers that jobs will be assigned by the scheduler. Users do not log in directly unless they are using the Desktop Access</p>
-<p>Partition (or Queue) – a pool of nodes from some part of the cluster
+<p>Queue (also called partition) – a pool of nodes from some part of the cluster
 Ex. “GPU”, ”A5000”, “A100” and “CPU”.</p>
 <p>More documentation on Slurm can be found
 <a class="reference external" href="https://slurm.schedmd.com/documentation.html">here</a></p>

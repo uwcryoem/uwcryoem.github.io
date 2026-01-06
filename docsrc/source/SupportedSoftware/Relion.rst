@@ -36,13 +36,19 @@ You should now see a small dot as a cursor that you can use to click the Yes but
 
 **Interactive Desktop instructions:**
 
+#. In Open OnDemand open an interactive desktop session. 
+#. In your desktop session, open a terminal window and type "Relion &", hit enter. In a few seconds the Relion application should open.
+
+
 **SSH instructions (authorized users):**
 
-**Start RELION and submit a job to the cluster:**
+#. If you are an authorized SSH user, make sure you have an X11 window system program open. (see X11 documentation `here <https://uwcryoem.github.io/SupportedSoftware/X11>`_: ) 
+#. Open a terminal window and type "ssh yourusername@wisc.edu@cryoemcluster.biochem.wisc.edu -YC", then press enter.
+#. Once logged in, navigate to your project directory and type "relion &". The Relion application should open. If you see errors they are likely related to X11. Please see X11 information linked above or contact cluster support. 
 
-    SSH into the login node, including -YC argument for compessed X11 forwarding : ssh -YC user@cryoemcluster.biochem.wisc.edu
-    Navigate to your RELION project directory:  cd /mnt/hpc_users/user/relionproject
-    Launch RELION with the following command: relion &
+**Submit a Relion job to the cluster:**
+
+    Connect to the cluster and start Relion using one of the methods above.
     Fill in the parameters for the relion job you want to run
     On the Run tab, if the option Submit to queue is editable, change Submit to queue to Yes.
     Defaults such as the "Queue submit command" and "Queue name" should already be provided.:18
@@ -59,42 +65,68 @@ RELION with MPI on multiple nodes
     GPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_gpu_mpi.sh
     CPU jobs should use /mnt/hpc_users/share/sbatch/relion_template_cpu_mpi.sh
 
-Suggestions for MPI and threads Jobs types for HPC submissions 	Suggested MPI and Threads
-	Queue
 
-Motion correction (RELION's Own) 	Use high count of MPI (20-60), only 1 thread per. 	cpu
-CTF estimation
-Use high count of MPI (20-60), only 1 thread per.
-cpu
-Auto-picking 	Training of topaz is not parallelised and should always be performed with a single MPI process (Use 1 MPI per CPU core, 1 thread per MPI). Picking with topaz has been parallelised and can be run using multiple MPI processes. For picking you can apply as many as 4x MPI per server node each getting 1 GPU assigned and you can run across multiple compute nodes. 	a5000 or a100
-Particle extraction 		
-2D classification 	5 MPI, 12 threads, GPU enabled 	a5000
-3D initial model 	5 MPI, 12 threads, GPU enabled 	a5000
-3D classification 	5 MPI, 12 threads, GPU enabled 	a5000
-3D auto-refine 	5 MPI, 12 threads, GPU enabled  	a5000
-3D multi-body 	5 MPI, 12 threads, GPU enabled 	a5000
-CTF refinement 	CPU-only job, use multiple threads per MPI and use all available CPU cores. 	cpu
-Bayesian polishing 	CPU-only job, use multiple threads per MPI and use all available CPU cores. 	cpu
-Mask creation 		
-Join star files 		
-Particle subtraction 		
-Post-processing 	CPU-only job, use multiple threads per MPI and use all available CPU cores. 	cpu
-Local resolution 		
-External 	External processes and depends on job. 	
-GPU accelerated jobs Jobs that support GPU acceleration
-Auto-picking
-2D classification
-3D initial model
-3D classification
-3D auto-refine
-3D multi-body
-Other information
+.. list-table:: Suggested Relion Settings
+   :widths: 25 25 10
+   :header-rows: 1
+   
+   * - Job types for HPC submissions
+     - Suggested MPI and Threads
+     - Queue
+   
+   * - Motion correction (RELION's own)
+     - 20-60 MPI, 1 thread
+     - cpu
+   * - CTF estimation
+     - 20-60 MPI, 1 thread
+     - cpu
+   * - Auto-picking
+     - ""
+     - a5000 or a100
+   *  - Particle extraction
+      - ""
+      - ""
+   *  - 2D classification
+      - 5 MPI, 12 threads, GPU enabled
+      - a5000 
+   *  - 3D initial model
+      - 5 MPI, 12 threads, GPU enabled
+      - a5000
+   *  - 3D classification
+      - 5 MPI, 12 threads, GPU enabled
+      - a5000
+   *  - 3D auto-refine
+      - 5 MPI, 12 threads, GPU enabled
+      - a5000
+   *  - 3D multi-body
+      - 5 MPI, 12 threads, GPU enabled
+      - a5000
+   *  - CTF refinesment
+      - Cpu-only, multiple threads per MPI and all available cpu cores
+      - cpu 
+   *  - Bayesian polishing
+      - Cpu-only, multiple threads per MPI and all avaialble cpu cores     
+      - cpu
+   *  - Mask creation
+      - ""
+      - ""
+   *  - Join star files   
+      - ""
+      - ""
+   *  - Particle subtraction
+      - ""
+      - ""
+   *  - Post-processing
+      - Cpu-only, multiple threads per MPI and all available cpu cores
+      - cpu 
+   *  - Local resolution
+      - ""
+      - ""
+   *  - External
+      - External processes; depends on job 
+      - ""
 
-**Setup X11 forwarding**
 
-If the UI doesn't launch your machine might not have X11 forwarding on (see below), or you may be missing a required software such as XQuartz.
-
-X11 forwarding KB article:
 
 **SLURM and continuing jobs**
 
@@ -105,7 +137,7 @@ GPU choice
 
 Internal benchmark found slightly better performance with the NVIDIA A5000 GPU vs the A100 GPU with 3D Refinement jobs and the RELION tutorial dataset. We recommend with RELION to generally submit to the A5000 queue and reserve the A100 queue for machine learning applications.
 
-Using multiple nodes
+** Using multiple nodes
 
 We encourage using multiple nodes from the "a5000" queue to speed your jobs! If you have very long-running jobs, we may request that you restrict your number of nodes to allow other group members to run jobs simultaneously. If there are few cluster users at a time you may be able to make use of larger number of nodes in parallel.
 

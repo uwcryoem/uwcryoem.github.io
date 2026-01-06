@@ -9,11 +9,11 @@ Definitions:
 
 Cluster – set of computers for high-performance computing
 
-Head node – computer from which users can submit jobs
+Control node – computer from which users can submit jobs
 
 Compute nodes – computers that jobs will be assigned by the scheduler. Users do not log in directly unless they are using the Desktop Access
 
-Partition (or Queue) – a pool of nodes from some part of the cluster
+Queue (also called partition) – a pool of nodes from some part of the cluster
 Ex. “GPU”, ”A5000”, “A100” and “CPU”.
 
 More documentation on Slurm can be found 
