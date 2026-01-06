@@ -4,7 +4,7 @@ CryoSPARC
 
 CryoSPARC (`cryoSPARC`_) is a scientific software platform for cryo-electron microscopy (cryo-EM) and single-particle analysis.
 
- _cryoSPARC: https://cryosparc.com
+.. _cryoSPARC: https://cryosparc.com
 
 -----------------
 Requesting Access
@@ -15,8 +15,9 @@ Before you can user CryoSPARC on the UW-Madison Cryo-EM HPC cluster, you will ne
 1. Obtain an non-profit academic research license via (`cryoSPARC registration`_).
 2. Apply via a form for the setup of your CryoSPARC instance on the UW-Madison Cryo-EM HPC cluster at (`uw account registration`_)
 
- _cryoSPARC registration: https://cryosparc.com/download
- _uw account registration: 
+.. _cryoSPARC registration: https://cryosparc.com/download
+
+.. _uw account registration: https://explore.wisc.edu/LP=3412
 
 -----------------
 Usage
@@ -55,11 +56,25 @@ Tutorial data
 The single-particle analysis tutorial dataset for the T20S protein is available at: `/mnt/hpc_users/share/resources/cryosparc/empiar_10025_subset/`
 
 --------------------------------
-Exporting and Importing projects
+Project data
 --------------------------------
+
+Save your projects within your home directory `/mnt/hpc_users/home/<netid>/cryosparc/projects`. The CryoSPARC instance will run as your own user with permissions to access and write within your folders. 
 
 After you have completed your data processing in CryoSPARC, you may want to bring your results back to your home lab.
 
-Please follow these steps to export a project and transfer via Globus:
+Please follow these steps to export a project: (`export project`_)
 
-If you want to bring a CryoSPARC project into this instance of CryoSPARC or your home instance you should also follow these steps:
+.. _export project: https://guide.cryosparc.com/application-guide-v4.0+/downloading-and-exporting-data
+
+If you want to import a project: 
+
+1. Transfer the project directory and all contents into a folder under your data location within your home directory `/mnt/hpc_users/home/<netid>/cryosparc/projects`
+
+2. Within the CryoSPARC interface, within the menu of 'New Project' choose to "Attach Project" and provide the location to the data location under the `/mnt/hpc_users/home/<netid>/cryosparc/projects`.
+
+.. image:: /images/CryoSPARC_Import_4.png
+   :width: 600
+   :alt: Image of the CryoSPARC attach project option.
+   
+You may hit an error about a lock file, if you have directly copied this project without detaching from the original CryoSPARC instance. CryoSPARC will try to prevent the same folder from being attached simultaneously to two instances of CryoSPARC at the same time. The CryoSPARC project may have a `cs.lock` file, if so, remove this lock file and retry to "Attach Project" via CryoSPARC in the new instance. 
