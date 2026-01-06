@@ -1,0 +1,4 @@
+sphinx-rtd-theme
+sphinx-toolbox
+sphinxcontrib-video
+sphinxcontrib.googleanalytics
