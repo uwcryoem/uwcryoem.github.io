@@ -15,7 +15,7 @@
     </script>
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cryosparc &mdash; UW-Madison Cryo-EM HPC 1.0 documentation</title>
+  <title>CryoSPARC &mdash; UW-Madison Cryo-EM HPC 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
@@ -113,7 +113,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Cryosparc</li>
+      <li class="breadcrumb-item active">CryoSPARC</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -123,14 +123,56 @@
            <div itemprop="articleBody">
              
   <section id="cryosparc">
-<h1>Cryosparc<a class="headerlink" href="#cryosparc" title="Link to this heading"></a></h1>
-<p>Cryosparc is a data processing platform for Cryo-EM data. Users must obtain their own Cryosparc licenses to use Cryosparc on the UW-Madison cryo-EM HPC.</p>
-<section id="cryosparc-resources">
-<h2>Cryosparc Resources:<a class="headerlink" href="#cryosparc-resources" title="Link to this heading"></a></h2>
-<div class="line-block">
-<div class="line"><a class="reference external" href="https://guide.cryosparc.com/">Cryosparc Guide</a></div>
-<div class="line"><a class="reference external" href="https://guide.cryosparc.com/processing-data/tutorials-and-case-studies/">Cryosparc Tutorials</a></div>
-</div>
+<h1>CryoSPARC<a class="headerlink" href="#cryosparc" title="Link to this heading"></a></h1>
+<p>CryoSPARC (<a class="reference external" href="https://cryosparc.com">cryoSPARC</a>) is a scientific software platform for cryo-electron microscopy (cryo-EM) and single-particle analysis.</p>
+<section id="requesting-access">
+<h2>Requesting Access<a class="headerlink" href="#requesting-access" title="Link to this heading"></a></h2>
+<p>Before you can user CryoSPARC on the UW-Madison Cryo-EM HPC cluster, you will need to:</p>
+<ol class="arabic simple">
+<li><p>Obtain an non-profit academic research license via (<a class="reference external" href="https://cryosparc.com/download">cryoSPARC registration</a>).</p></li>
+<li><p>Apply via a form for the setup of your CryoSPARC instance on the UW-Madison Cryo-EM HPC cluster at (<a class="reference external" href="https://explore.wisc.edu/LP=3412">uw account registration</a>)</p></li>
+</ol>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>CryoSPARC should be directly launched from the Open OnDemand frontpage.</p>
+<a class="reference internal image-reference" href="../_images/CryoSPARC_0.png"><img alt="Image of Open OnDemand icon for CryoSPARC application highlighted." src="../_images/CryoSPARC_0.png" style="width: 600px;" />
+</a>
+<p>We recommend that you choose to launch a session of at least 12-hours length to have time for running your jobs to completion. When launching a processing job, you will need to choose between available queues on the HPC cluster.</p>
+<a class="reference internal image-reference" href="../_images/CryoSPARC_1.png"><img alt="Image of the launcher for CryoSPARC with selection of time for the session." src="../_images/CryoSPARC_1.png" style="width: 600px;" />
+</a>
+<p>Please have patience for start-up of a CryoSPARC session, and only start a single CryoSPARC session at a time on the cluster. After a few minutes, you will see a ready to use status for the application. You can then proceed to connect.</p>
+<a class="reference internal image-reference" href="../_images/CryoSPARC_2.png"><img alt="Image of the launcher for CryoSPARC with selection of time for the session." src="../_images/CryoSPARC_2.png" style="width: 600px;" />
+</a>
+<p>This will then launch a session via remote desktop to a browser view of the CryoSPARC application. You can then proceed to login with your username and password that were provided after completing our registration form above. After login you should see the typical CryoSPARC web interface as below, showing your projects and job activities.</p>
+<a class="reference internal image-reference" href="../_images/CryoSPARC_3.png"><img alt="Image of the CryoSPARC main page." src="../_images/CryoSPARC_3.png" style="width: 600px;" />
+</a>
+<p>Please choose the <cite>r5000</cite> queue for submitting your jobs. If additional queue resources are required, reach out to the HPC administrators first.</p>
+</section>
+<section id="tutorial-data">
+<h2>Tutorial data<a class="headerlink" href="#tutorial-data" title="Link to this heading"></a></h2>
+<p>The single-particle analysis tutorial dataset for the T20S protein is available at: <cite>/mnt/hpc_users/share/resources/cryosparc/empiar_10025_subset/</cite></p>
+</section>
+<section id="project-data">
+<h2>Project data<a class="headerlink" href="#project-data" title="Link to this heading"></a></h2>
+<p>Save your projects within your home directory <cite>/mnt/hpc_users/home/&lt;netid&gt;/cryosparc/projects</cite>. The CryoSPARC instance will run as your own user with permissions to access and write within your folders.</p>
+<p>After you have completed your data processing in CryoSPARC, you may want to bring your results back to your home lab.</p>
+<p>Please follow these steps to export a project: (<a class="reference external" href="https://guide.cryosparc.com/application-guide-v4.0+/downloading-and-exporting-data">export project</a>)</p>
+<p>If you want to import a project:</p>
+<ol class="arabic simple">
+<li><p>Transfer the project directory and all contents into a folder under your data location within your home directory <cite>/mnt/hpc_users/home/&lt;netid&gt;/cryosparc/projects</cite></p></li>
+<li><p>Within the CryoSPARC interface, within the menu of ‘New Project’ choose to “Attach Project” and provide the location to the data location under the <cite>/mnt/hpc_users/home/&lt;netid&gt;/cryosparc/projects</cite>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/CryoSPARC_Import_4.png"><img alt="Image of the CryoSPARC attach project option." src="../_images/CryoSPARC_Import_4.png" style="width: 600px;" />
+</a>
+<p>You may hit an error about a lock file, if you have directly copied this project without detaching from the original CryoSPARC instance. CryoSPARC will try to prevent the same folder from being attached simultaneously to two instances of CryoSPARC at the same time. The CryoSPARC project may have a <cite>cs.lock</cite> file, if so, remove this lock file and retry to “Attach Project” via CryoSPARC in the new instance.</p>
+<section id="additional-cryosparc-resources">
+<h3>Additional Cryosparc Resources:<a class="headerlink" href="#additional-cryosparc-resources" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Cryosparc Guide <a class="reference external" href="https://guide.cryosparc.com/">https://guide.cryosparc.com/</a></p></li>
+<li><p>Cryosparc Tutorials <a class="reference external" href="https://guide.cryosparc.com/processing-data/tutorials-and-case-studies/">https://guide.cryosparc.com/processing-data/tutorials-and-case-studies/</a></p></li>
+</ol>
+</section>
 </section>
 </section>
 
