@@ -8,7 +8,7 @@ Globus:
 
 Globus is the recommended way to transfer files to the cluster.
 
-Transfer files to the cluster via Globus Connect Personal:
+**Transfer files to the cluster via Globus Connect Personal:**
 
 #. To install the Globus Connect Personal application please visit: https://www.globus.org/globus-connect-personal. 
 #. After installing Globus Connect Personal, start the application and choose Web: Transfer Files from the dropdown.
@@ -26,7 +26,7 @@ Transfer files to the cluster via Globus Connect Personal:
 
 
 
-To transfer files to the cluster via Globus web only:
+**To transfer files to the cluster via Globus web only:**
 
 #. Login to https://www.globus.org/
 #. Search for the UW-Madison Cryo-Electron Microscopy Center HPC Access collection.
