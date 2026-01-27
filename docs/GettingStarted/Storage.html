@@ -95,7 +95,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Troubleshooting.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Videos.html">Videos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Training.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Training.html">External links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Training.html#training">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../TrainingAndFaqs/Faqs.html">Frequently Asked Questions</a></li>
 </ul>
 
@@ -124,8 +125,23 @@
              
   <section id="storage-on-the-hpc-cluster">
 <h1>Storage on the HPC Cluster<a class="headerlink" href="#storage-on-the-hpc-cluster" title="Link to this heading"></a></h1>
-<p>User files for the HPC cluster are stored on a Ceph provides POSIX filesystem storage.</p>
-<p>To transfer files to the cluster:</p>
+<p>User files for the HPC cluster are stored on a Ceph storage cluster. Ceph provides fast and reliable data tranfers.</p>
+<section id="globus">
+<h2>Globus:<a class="headerlink" href="#globus" title="Link to this heading"></a></h2>
+<p>Globus is the recommended way to transfer files to the cluster.</p>
+<p>Transfer files to the cluster via Globus Connect Personal:</p>
+<ol class="arabic simple">
+<li><p>To install the Globus Connect Personal application please visit: <a class="reference external" href="https://www.globus.org/globus-connect-personal">https://www.globus.org/globus-connect-personal</a>.</p></li>
+<li><p>After installing Globus Connect Personal, start the application and choose Web: Transfer Files from the dropdown.</p></li>
+<li><p>This will open Globus in a web browser. On the left half of the screen you should see files on your local computer. On the right half of the screen you should search for the UW-Madison Cryo-Electron Microscopy Center HPC Access collection.</p></li>
+<li><p>In the collection, navigate to the folder you want to transfer file to. You can then drag and drop files or select a file and choose Transfer or Sync to.</p></li>
+<li><p>Finally, click the start button to being the transfer.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/Globus3.png"><img alt="Image of Globus Menu" src="../_images/Globus3.png" style="width: 400px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/Globus2.png"><img alt="Image of Globus User Interface" src="../_images/Globus2.png" style="width: 400px;" />
+</a>
+<p>To transfer files to the cluster via Globus web only:</p>
 <ol class="arabic simple">
 <li><p>Login to <a class="reference external" href="https://www.globus.org/">https://www.globus.org/</a></p></li>
 <li><p>Search for the UW-Madison Cryo-Electron Microscopy Center HPC Access collection.</p></li>
@@ -137,6 +153,7 @@
 </a>
 <a class="reference internal image-reference" href="../_images/Globus1.png"><img alt="Transferring files via the Globus user interface." src="../_images/Globus1.png" style="width: 400px;" />
 </a>
+</section>
 </section>
 
 

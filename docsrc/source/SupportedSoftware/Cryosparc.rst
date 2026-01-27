@@ -85,7 +85,7 @@ Cryosparc is a data processing platform for Cryo-EM data. Users must obtain thei
 
 
 Additional Cryosparc Resources: 
-*********************
+*********************************
 1. Cryosparc Guide `<https://guide.cryosparc.com/>`_
 2. Cryosparc Tutorials `<https://guide.cryosparc.com/processing-data/tutorials-and-case-studies/>`_
 
