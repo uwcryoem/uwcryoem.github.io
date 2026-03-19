@@ -29,6 +29,7 @@ UW-Madison cryo-EM HPC
    :caption: Slurm Job Scheduler 
 
    About Slurm <SlurmJobScheduler/AboutSlurm>
+   Advanced Slurm <SlurmJobScheduler/AdvancedSlurm>
    Slurm User Guide <SlurmJobScheduler/SlurmUserGuide>
    Slurm Batch Scripts <SlurmJobScheduler/SlurmBatchScripts>
 
@@ -59,6 +60,7 @@ UW-Madison cryo-EM HPC
    Matlab <SupportedSoftware/Matlab> 
    Jupyter Notebook <SupportedSoftware/Jupyter>
    Imod <SupportedSoftware/Imod>
+   Isonet <SupportedSoftware/Isonet>
    Aretomo <SupportedSoftware/Aretomo>
    Chimera(x) <SupportedSoftware/Chimera> 
    Cryosparc <SupportedSoftware/Cryosparc>

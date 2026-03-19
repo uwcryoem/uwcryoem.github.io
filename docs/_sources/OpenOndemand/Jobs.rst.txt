@@ -28,6 +28,9 @@ Helper script locations: /mnt/hpc_users/share/bin
    * - alphafold-multimer.sh
      - 
      - 
+
+Relion scripts are located at /mnt/hpc_users/share/sbatch
+
 .. list-table:: Relion script locations and usage
      :widths: 25 25 45
      :header-rows: 1

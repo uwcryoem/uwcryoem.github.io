@@ -101,7 +101,7 @@ RELION with MPI on multiple nodes
    *  - 3D multi-body
       - 5 MPI, 12 threads, GPU enabled
       - a5000
-   *  - CTF refinesment
+   *  - CTF refinement
       - Cpu-only, multiple threads per MPI and all available cpu cores
       - cpu 
    *  - Bayesian polishing
