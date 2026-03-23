@@ -127,6 +127,8 @@
              
   <section id="advanced-slurm-concepts">
 <h1>Advanced Slurm Concepts<a class="headerlink" href="#advanced-slurm-concepts" title="Link to this heading"></a></h1>
+<p>Request a variable number of workers:</p>
+<p>You can request a variable number of compute nodes by including a range in your Sbatch script. The code below will request between 2 and 4 nodes depending on how many cluster resources are idle.</p>
 <p>Job Arrays:
 Job arrays allow you to submit similar jobs quickly.</p>
 <p>sbatch –array=0-10</p>
