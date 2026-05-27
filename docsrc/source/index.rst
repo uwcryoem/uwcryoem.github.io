@@ -29,6 +29,7 @@ UW-Madison cryo-EM HPC
    :caption: Slurm Job Scheduler 
 
    About Slurm <SlurmJobScheduler/AboutSlurm>
+   Partition Limits <SlurmJobScheduler/PartitionLimits>
    Advanced Slurm <SlurmJobScheduler/AdvancedSlurm>
    Slurm User Guide <SlurmJobScheduler/SlurmUserGuide>
    Slurm Batch Scripts <SlurmJobScheduler/SlurmBatchScripts>
