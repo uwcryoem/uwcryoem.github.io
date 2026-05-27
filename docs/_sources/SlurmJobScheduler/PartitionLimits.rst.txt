@@ -7,12 +7,14 @@ As more users being using the cluster, we've had to put some limits on the numbe
 It may be useful for some users to request a variable number of nodes at a time. For example, if you want your job to use four nodes but four nodes aren't available you can request one to four nodes. To do this you can use the following in your sbatch script:
 
 .. code-block:: 
-    #SBATCH --nodes=1-4 
+
+   #SBATCH --nodes=1-4 
 
 Please note if you request more than four nodes even in a variable request, your job will not run. 
 
 For example, the following job will never run:
 
 .. code-block:: 
-    #SBATCH --nodes=2-5 
+   
+   #SBATCH --nodes=2-5 
 
