@@ -175,3 +175,10 @@ These values, particularly the EXTRA fields are then provided via the relion_tem
  .. image:: /images/relionlogo.jpg
     :alt: Relion logo
     :width: 140
+
+
+Common issues: 
+
+Refine3d: corrupted size vs. prev_size
+
+Solution: Combine iterations through disc
