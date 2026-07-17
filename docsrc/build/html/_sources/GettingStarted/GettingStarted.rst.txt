@@ -4,7 +4,7 @@ Getting Started with the HPC Cluster
 
 This document describes steps to get started with the HPC cluster.
 
-1. Request access to the cluster here: https://ondemandtest.biochem.wisc.edu
+1. Request access to the cluster here: https://hpcstart.cryoem.wisc.edu
 
 2. You will be prompted to login via CILogon. Choose your university or institution in the dropdown. 
 
