@@ -60,7 +60,7 @@ UW-Madison cryo-EM HPC
    Relion <SupportedSoftware/Relion>
    Matlab <SupportedSoftware/Matlab> 
    Jupyter Notebook <SupportedSoftware/Jupyter>
-   Imod <SupportedSoftware/Imod>
+   Imod/Etomo <SupportedSoftware/ImodEtomo>
    Isonet <SupportedSoftware/Isonet>
    Aretomo <SupportedSoftware/Aretomo>
    Chimera(x) <SupportedSoftware/Chimera> 
@@ -72,6 +72,7 @@ UW-Madison cryo-EM HPC
    :maxdepth: 2
    :caption: Training and FAQs
 
+   Links <TrainingAndFaqs/Links>
    Troubleshooting <TrainingAndFaqs/Troubleshooting>
    Videos <TrainingAndFaqs/Videos>
    Training  <TrainingAndFaqs/Training>
