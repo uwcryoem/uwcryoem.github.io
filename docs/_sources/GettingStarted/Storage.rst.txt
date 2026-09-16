@@ -43,3 +43,7 @@ Your files should now be accessible in your home directory on the cluster.
 .. image:: /images/Globus1.png
   :width: 400
   :alt: Transferring files via the Globus user interface.
+
+Link to instructions for using Globus to transfer facility data: 
+
+https://cryoem.wisc.edu/wp-content/uploads/sites/341/2025/03/GlobusDocumentation_CEMRC-1.pdf
