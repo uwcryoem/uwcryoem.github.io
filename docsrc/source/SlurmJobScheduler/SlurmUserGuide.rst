@@ -215,7 +215,9 @@ sacct: Get information about pending, completed, and running jobs
 
    $sacct --starttime 2023-11-1
 
-.. list-table: sacct output
+
+
+.. list-table:: sacct output
    :widths: 10 15 10 15 10
    :header-rows: 1
 
@@ -230,6 +232,14 @@ sacct: Get information about pending, completed, and running jobs
      - a5000
      - 2
      - RUNNING 
+
+
+Command to get working directory of jobs:
+
+
+.. code-block::
+
+   $sacct -X -n -P -o JobIDRaw,State,End,WorkDir
 
 
 scancel: Signal or cancel jobs, job arrays, or job steps.

@@ -1,6 +1,5 @@
-=========
 CryoSPARC
-=========
+===========
 
 CryoSPARC (`cryoSPARC`_) is a scientific software platform for cryo-electron microscopy (cryo-EM) and single-particle analysis.
 
@@ -79,7 +78,7 @@ If you want to import a project:
    
 You may hit an error about a lock file, if you have directly copied this project without detaching from the original CryoSPARC instance. CryoSPARC will try to prevent the same folder from being attached simultaneously to two instances of CryoSPARC at the same time. The CryoSPARC project may have a `cs.lock` file, if so, remove this lock file and retry to "Attach Project" via CryoSPARC in the new instance. 
 
-=======
+
 Cryosparc is a data processing platform for Cryo-EM data. Users must obtain their own Cryosparc licenses to use Cryosparc on the UW-Madison cryo-EM HPC.
 
 
